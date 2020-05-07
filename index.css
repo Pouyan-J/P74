@@ -20,7 +20,7 @@ p,
 ul,
 li {
   color: var(--text-color);
-  font-family: courier;
+  font-family: courier, monospace;
   font-size: 3vw;
 }
 
