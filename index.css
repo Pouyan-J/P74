@@ -1,6 +1,8 @@
 :root {
-  --console-color: #0a0a0a;
-  --background-color: #0a0a0a;
+  //--console-color: #0a0a0a;
+  //--background-color: #0a0a0a;
+  --console-color: #000000;
+  --background-color: #000000;
   --text-color: #ffffff;
 }
 
