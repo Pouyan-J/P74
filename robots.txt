@@ -2,3 +2,5 @@ User-agent: *
 Disallow: /googlee0ce046282b9ace4.html
 Disallow: /README.md
 Disallow: /LICENSE
+Disallow: /public_key.html
+Disallow: /public_key.pem
