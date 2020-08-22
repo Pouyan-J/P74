@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Public Key</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="icon.jpg" />
+    <link rel="stylesheet" href="index.css" />
+
+    <style>
+        textarea {
+            width: 100%;
+            height: 50%;
+            padding: 5vw 5vw;
+            box-sizing: border-box;
+            border-radius: 0.5vw;
+            background-color: black;
+            resize: none;
+            font-size: 1.5vw;
+            font-family: monospace;
+            color: white;
+        }
+
+        button {
+            width: 50%;
+            padding: 1vw;
+            border-radius: 0.5vw;
+            background-color: rgb(160, 160, 160);
+            font-size: 1.25vw;
+            font-family: monospace;
+        }
+
+        button { 
+            float: left;
+        }
+    </style>
+
+    <script>
+        function pk_copy() {
+            var copyText = document.getElementById("pk_area");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            alert(`The public key has been copied.
+Der öffentliche Schlüssel wurde kopiert.
+Открытый ключ скопирован.
+از کلید همگانی رونوشت‌برداری شده است.`);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="boxed">
+        <textarea id='pk_area' rows="9" cols="64" readonly>
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqd4QHxmErseJtXnqgmNQ
+tK4iJ+r4LyZ56QTnp5dBtQc7d2hvhqfHtW7ejAnX/pWhuznbEiHelNQ/gC9BLxTQ
+Cv7g1JY3Z8Z9OZWfJReOcaVcpz7bc3eCuhxXSjq3NTJjQPRM54BxbAIkczlccpRW
+OhXSyU4upjU+mkgHc4ThkIhpOr/MkIV/0qAVUU6jSI9xI/ya0rfXbFp5HwfhKxhb
+4CntlMuN+LteWBtx4ePfr1yV8F5QVuCL41oSNLJdpWZ9mNhJ+bm6u7QEpESgRAqU
+Qdlna5yAVSkp7Vs7yFTJjc8vPQRZvqcbcpkTrc6LqySLwZ1g5nDbLpyQHnBINqmL
+RQIDAQAB
+-----END PUBLIC KEY-----</textarea>
+    <br />
+    <button onclick="pk_copy()"><strong>Copy | Kopieren | Копировать | رونوشت</strong></button>
+    <a href="public_key.pem" download="public_key.pem"><button><strong>Download | Herunterladen | Скачать | دریافت</strong></button></a>
+    </div>
+</body>
+
+</html>
