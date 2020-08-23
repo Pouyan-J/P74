@@ -1,6 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
 :root {
-  //--console-color: #0a0a0a;
-  //--background-color: #0a0a0a;
   --console-color: #000000;
   --background-color: #000000;
   --text-color: #ffffff;
@@ -22,13 +22,13 @@ p,
 ul,
 li {
   color: var(--text-color);
-  font-family: courier, monospace;
+  font-family: 'Play', sans-serif;
   font-size: 3vw;
 }
 
 h1 {
   color: var(--text-color);
-  font-family: courier;
+  font-family: 'Play', sans-serif;
   font-size: 4vw;
   text-align: center;
 }
