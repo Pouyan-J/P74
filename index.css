@@ -18,15 +18,35 @@ body {
   background: var(--console-color);
 }
 
+hr {
+  border-color: gray;
+}
+
 .en {font-family: 'Play', sans-serif;}
 .de {font-family: 'Play', sans-serif;}
 .ru {font-family: 'Play', sans-serif;}
 .fa {font-family: 'Shabnam', sans-serif; font-size: 90%;}
 
-h2,
 p,
 ul,
 li {
+  color: var(--text-color);
+  font-family: 'Play', sans-serif;
+  font-size: 2.25vw;
+}
+
+sub,
+sup {
+  font-size: 1.5vw;
+}
+
+h3 {
+  color: var(--text-color);
+  font-family: 'Play', sans-serif;
+  font-size: 2vw;
+}
+
+h2 {
   color: var(--text-color);
   font-family: 'Play', sans-serif;
   font-size: 3vw;
@@ -35,8 +55,8 @@ li {
 h1 {
   color: var(--text-color);
   font-family: 'Play', sans-serif;
-  font-size: 4vw;
-  text-align: center;
+  font-size: 5vw;
+  /*text-align: center;*/
 }
  
 a:link {
@@ -76,6 +96,7 @@ a:active {
 
   h1,
   h2,
+  h3,
   p,
   ul,
   li,
