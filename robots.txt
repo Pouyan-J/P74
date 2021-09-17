@@ -5,3 +5,6 @@ Disallow: /LICENSE
 Disallow: /public_key.html
 Disallow: /public_key.pem
 Disallow: /public_key
+Disallow: /crypto
+Disallow: /crypto.html
+Disallow: /crypto_qr/*
