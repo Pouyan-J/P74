@@ -38,6 +38,12 @@ hr {
   border-color: gray;
 }
 
+td {
+  border: solid gray;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
 .en {font-family: 'Play', sans-serif;}
 .de {font-family: 'Play', sans-serif;}
 .ru {font-family: 'Play', sans-serif;}
@@ -45,7 +51,9 @@ hr {
 
 p,
 ul,
-li {
+li,
+td,
+blockquote {
   color: var(--text-color);
   font-family: 'Play', sans-serif;
   font-size: 2.25vw;
