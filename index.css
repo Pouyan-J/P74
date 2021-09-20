@@ -2,9 +2,9 @@
 @import url('https://cdn.jsdelivr.net/gh/rastikerdar/shabnam-font@v5.0.1/dist/font-face.css');
 
 :root {
-  --console-color: #060606;
+  --console-color: #000000;
   --background-color: #000000;
-  --text-color: white;
+  --text-color: #ffffff;
 }
 
 body {
