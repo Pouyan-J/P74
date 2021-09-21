@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!-- Clearly I know nothing about UI
+     and I don't care either! -->
+
+<html lang="en">
+
+<head>
+    <title>FAQ</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Some frequently asked questions about this website">
+    <meta name="keywords" content="Pouyan, FAQ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="icon.jpg" />
+    <link rel="stylesheet" href="index.css" />
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+            text-justify: newspaper;
+            hyphens: auto
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxed">
+        <h1>Frequently Asked <mark>Questions</mark></h1>
+
+        <hr>
+
+        <h2>What is the meaning of Pouyan?</h2>
+        <p>
+            <i>Pouyan</i> is a Persian given name, literally meaning "dynamic" or "seeker".
+            <br />
+        </p>
+        <p>
+            <b>Pronunciation:</b> /ˈpuːjɑn/<br />
+            <b>Other spelling variants:</b> Pooyan, Puyan<br />
+            <b>Transliteration:</b> <span class="fa">پویان</span> (Ir. Persian), <span class="ru">Пуян</span> (Tj.
+            Persian)
+        </p>
+
+        <hr>
+
+        <h2>What are the meanings 74 and 01001010?</h2>
+        <p>
+            Both 74<sub>10</sub> and 1001010<sub>2</sub> are the <a href="https://en.wikipedia.org/wiki/ASCII"
+                target="_blank">ASCII</a> values of <i>J</i> (which is the initial of my surname – <b>J</b>aberi).
+
+        <table style="width: 100%; table-layout: fixed;">
+            <tr>
+                <td><b>char</b></td>
+                <td><b>bin</b></td>
+                <td><b>oct</b></td>
+                <td><b>dec</b></td>
+                <td><b>hex</b></td>
+            </tr>
+            <tr>
+                <td>P</td>
+                <td>01010000</td>
+                <td>120</td>
+                <td>80</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>J</td>
+                <td>01001010</td>
+                <td>112</td>
+                <td>74</td>
+                <td>4A</td>
+            </tr>
+        </table>
+        </p>
+
+        <hr>
+
+        <h2>Why is everything dark on this website?</h2>
+        <blockquote cite="https://www.quotes.net/mquote/91407">
+            “If you only knew the power of the Dark Side.” — Darth Vader
+        </blockquote>
+        <blockquote cite="https://knowyourmeme.com/memes/bravo-six-going-dark">
+            “Bravo Six, going dark.” — Cpt. Price
+        </blockquote>
+        <p>
+            Because <b>black</b> is my favorite color.
+        </p>
+
+        <hr>
+
+        <h2>What is with PE dates?</h2>
+        <p>
+            Before anything else, please note that this is a personal website. Additionally, no version of
+            <a href="https://p74.ir/en" target="_blank">my CV</a> on this website is meant to be used for
+            official purposes (such as job applications). That being said, I like my website to be how I
+            desire to be, rather than how it is typically supposed to be.
+        </p>
+        <p>
+            Long story short, I trust that the <i>Gregorian calendar</i> is primarily a religious one and inappropriate
+            for
+            modern-day use-cases.
+            In contrast, the <i><a href="https://www.timeanddate.com/calendar/persian-calendar.html"
+                    target="_blank">Jalali
+                    calendar</a></i>
+            is just about what could be called a perfect solar calendar for the needs of the
+            <sub>CE</sub>21<sup>st</sup>
+            century. Each year of this calendar begins exactly on the spring equinox, followed by subsequent solstices
+            and equinoxes to determine the beginning of other seasons as well.
+        </p>
+        <p>
+            As an acclamation for Persian history, I would like to utilize a particular variant of this calendar, known
+            as
+            the
+            <i>Persian Imperial calendar</i>. The origin of this variant is specified to be the coronation of
+            <a href="https://www.britannica.com/biography/Cyrus-the-Great" target="_blank">Cyrus the Great</a>
+            which occurred during 559<sub>BCE</sub>.
+            <br />
+            <abbr title="Persian Empire">PE</abbr>
+            (De: <abbr title="Persisches Königreich">PK</abbr> |
+            Ru: <abbr title="Персидская Империя">ПИ</abbr> |
+            Fa: <span class="fa"><abbr title="شاهنشاهی پارسی">ش.پ</abbr></span>)
+            stands for <i>Persian Empire</i>.
+        </p>
+        <p>
+            <script type="text/javascript">
+                var options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+                var pe = new Date(new Date().setFullYear(new Date().getFullYear() + 1180))
+                    .toLocaleDateString('fa-IR', options).replace(/([۰-۹])/g,
+                        token => String.fromCharCode(token.charCodeAt(0) - 1728));
+                document.write(`Today is ${pe}<sub>PE</sub>`);
+            </script>
+        </p>
+
+        <hr>
+
+        <h2>What is a public key?</h2>
+        <p>
+            It is a technical term, related to <a
+                href="https://www.sciencedirect.com/topics/computer-science/asymmetric-cryptography"
+                target="_blank">asymmetric cryptography</a>.
+            You could encrypt any desired message using <a href="https://p74.ir/public_key" target="_blank">my public
+                key</a> and then sent it to me through any platform since no individual
+            could ever decrypt it other than whoever possesses the corresponding private key (supposedly me).
+            Furthermore, it could be used to validate my digital signature.
+        </p>
+
+        <hr>
+
+        <h2>What the website is designed like this?</h2>
+        <p>
+            To be honest, I barely know anything about UI design and front-end development since these are not my fields
+            of expertise.
+            My job is on the server side.
+        </p>
+        <blockquote cite="https://www.quotes.net/quote/66342">
+            “We work in the dark to serve the light…” — Ezio Auditore
+        </blockquote>
+
+        <hr>
+
+        <h2>Would you throw a random number for no reason?</h2>
+        <p>
+            <script type="text/javascript">
+                document.write(`Here you go: ${Math.floor(Math.random() * (1000000 + 1))}`);
+            </script>
+            <noscript>
+                Not until you <a href="https://www.enable-javascript.com">enable JavaScript</a>!
+            </noscript>
+        </p>
+
+        <hr>
+
+        <h2>Did the Apollo moon landing happen?</h2>
+        <p>
+            Yes.
+        </p>
+
+        <a
+            href="https://www.nasa.gov/feature/nasa-releases-stunning-panoramas-of-apollo-landing-sites-for-50th-anniversary"
+            target="_blank">
+            <img src="https://www.nasa.gov/sites/default/files/styles/ubernode_alt_horiz/public/thumbnails/image/panorama_view_of_apollo_17_lunar_surface.jpg"
+                alt="Panorama view of Apollo 17 lunar surface"
+                style="width: 100%;">
+        </a>
+        <hr>
+
+        <h3 style="text-align: left;"><a href="https://P74.ir">P74.ir</a></h3>
+    </div>
+</body>
+
+</html>
