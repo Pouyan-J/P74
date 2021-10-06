@@ -149,6 +149,10 @@ mark {
   {
       display: none !important;
   }
+
+  .centered_boxed {
+    opacity: 1.0;
+  }
 }
 
 @media only screen and (max-width: 768px) {
