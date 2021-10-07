@@ -9,6 +9,10 @@
 
 body {
   background-color: var(--background-color);
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/4e/Code-wallpaper-2.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .boxed {
@@ -16,6 +20,7 @@ body {
   padding: 1% 3%;
   border-radius: 1vw;
   background: var(--console-color);
+  opacity: 0.9;
 }
 
 .centered_boxed {
@@ -27,6 +32,7 @@ body {
   border-radius: 1vw;
   padding: 1% 3%;
   background: var(--console-color);
+  opacity: 0.9;
 }
 
 .container {
@@ -120,10 +126,12 @@ mark {
     margin: 0% 0% 0%;
     padding: 1% 3%;
     background: #ffffff;
+    opacity: 1.0;
   }
 
   .centered_boxed {
     background: #ffffff;
+    opacity: 1.0;
   }
 
   h1,
