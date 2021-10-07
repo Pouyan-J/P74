@@ -9,14 +9,14 @@
 
 body {
   background-color: var(--background-color);
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/4e/Code-wallpaper-2.jpg);
+  background-image: url(./img/wd.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
 
 .boxed {
-  margin: 5% 10% 0%;
+  margin: 5% 10% 5%;
   padding: 1% 3%;
   border-radius: 1vw;
   background: var(--console-color);
@@ -120,6 +120,7 @@ mark {
 @media print {
   body {
     background-color: #ffffff;
+    background-image: none;
   }
 
   .boxed {
