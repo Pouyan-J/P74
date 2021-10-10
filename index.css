@@ -95,7 +95,10 @@ h1.subpage {
 
 p.homepage {
   text-align: left;
+}
 
+p.description {
+  width: 80%;
 }
  
 a:link {
