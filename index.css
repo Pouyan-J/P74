@@ -93,8 +93,20 @@ h1.subpage {
   text-align: center;
 }
 
+h3.caption {
+  font-size: 2vw;
+}
+
 p.homepage {
+  text-align: right;
+  font-size: 2vw;
+  padding-right: 2vw;
+}
+
+p.homepage-fa {
   text-align: left;
+  font-size: 2vw;
+  padding-left: 2vw;
 }
 
 p.description {
@@ -180,6 +192,8 @@ button.pk {
   p,
   ul,
   li,
+  td,
+  blockquote,
   a,
   a:link,
   a:visited
