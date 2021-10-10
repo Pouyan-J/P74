@@ -144,9 +144,11 @@ button.pk {
   width: 50%;
   padding: 1vw;
   border-radius: 0.5vw;
-  background-color: rgb(160, 160, 160);
+  margin-bottom: 10px;
+  background-color: #222222;
   font-size: 1.25vw;
   font-family: 'Play', sans-serif;
+  color: white;
   cursor: pointer;
   float: left;
 }
@@ -207,6 +209,7 @@ button.pk {
   button.pk {
     width: 100%;
     float: none;
+    margin-bottom: 0px;
   }
 
   #pk_area {
