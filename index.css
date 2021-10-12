@@ -65,6 +65,10 @@ blockquote {
   font-size: 2.25vw;
 }
 
+ul {
+  list-style: none;
+}
+
 sub,
 sup {
   font-size: 1.5vw;
