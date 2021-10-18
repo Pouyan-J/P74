@@ -1,50 +1,146 @@
 <!DOCTYPE html>
-<!-- Clearly I know nothing about UI
-     and I don't care either! -->
-
 <html lang="en">
 
 <head>
-    <title>Cryptocurrencies</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Public crypto wallets of Pouyan">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="keywords" content="crypto, cryptocurrency, blockchain">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Pouyan Jaberi">
+    <meta name="description" content="Public crypto wallets of Pouyan">
+
     <link rel="icon" href="icon.jpg" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Cryptocurrencies</title>
 
     <style>
-        h1,
-        h2,
-        h3,
-        p,
-        sub,
-        sup,
-        ul,
-        li {
-            text-align: center;
+        img {
+            width: 20vw;
         }
 
-        img {
-            width: 50%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+        figcaption {
+            padding: 1rem;
+        }
+
+        .flex-container {
+            align-items: center;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        @media only screen and (max-width: 600px) {
+            img {
+                width: 50vw;
+            }
+        }
+
+        @media print {
+            img {
+                width: 20vw;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="boxed">
-        <h1 class="subpage"><mark>Crypto</mark>currencies</h1>
+    <nav class="navbar no-print">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="https://p74.ir" class="nav-link">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="space-station-moon-alt"
+                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                        class="svg-inline--fa fa-space-station-moon-alt fa-w-16 fa-5x">
+                        <g class="fa-group">
+                            <path fill="currentColor"
+                                d="M501.70312,224H448V160H368V96h48V66.67383A246.86934,246.86934,0,0,0,256,8C119.03125,8,8,119.0332,8,256a250.017,250.017,0,0,0,1.72656,28.26562C81.19531,306.76953,165.47656,320,256,320s174.80469-13.23047,246.27344-35.73438A250.017,250.017,0,0,0,504,256,248.44936,248.44936,0,0,0,501.70312,224ZM192,240a80,80,0,1,1,80-80A80.00021,80.00021,0,0,1,192,240ZM384,343.13867A940.33806,940.33806,0,0,1,256,352c-87.34375,0-168.71094-11.46094-239.28906-31.73633C45.05859,426.01953,141.29688,504,256,504a247.45808,247.45808,0,0,0,192-91.0918V384H384Z"
+                                class="fa-primary"></path>
+                            <path fill="currentColor"
+                                d="M256,320c-90.52344,0-174.80469-13.23047-246.27344-35.73438a246.11376,246.11376,0,0,0,6.98438,35.998C87.28906,340.53906,168.65625,352,256,352s168.71094-11.46094,239.28906-31.73633a246.11376,246.11376,0,0,0,6.98438-35.998C430.80469,306.76953,346.52344,320,256,320Zm-64-80a80,80,0,1,0-80-80A80.00021,80.00021,0,0,0,192,240Zm0-104a24,24,0,1,1-24,24A23.99993,23.99993,0,0,1,192,136Z"
+                                class="fa-secondary"></path>
+                        </g>
+                    </svg>
+                    <span class="link-text">Home</span>
+                </a>
+            </li>
 
-        <hr>
-        <br />
+            <li class="nav-item">
+                <a href="en.html" class="nav-link">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-powerpoint"
+                        class="svg-inline--fa fa-file-powerpoint fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 384 512" style="transform: scale(0.8);">
+                        <path fill="currentColor" class="fa-primary"
+                            d="M193.7 271.2c8.8 0 15.5 2.7 20.3 8.1 9.6 10.9 9.8 32.7-.2 44.1-4.9 5.6-11.9 8.5-21.1 8.5h-26.9v-60.7h27.9zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-153 31V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm53 165.2c0 90.3-88.8 77.6-111.1 77.6V436c0 6.6-5.4 12-12 12h-30.8c-6.6 0-12-5.4-12-12V236.2c0-6.6 5.4-12 12-12h81c44.5 0 72.9 32.8 72.9 77z">
+                        </path>
+                    </svg>
+                    <span class="link-text">CV</span>
+                </a>
+            </li>
 
-        <div class="container">
-            <div>
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="id-card"
+                        class="svg-inline--fa fa-id-card fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 576 512">
+                        <path fill="currentColor" class="fa-primary"
+                            d="M528 32H48C21.5 32 0 53.5 0 80v16h576V80c0-26.5-21.5-48-48-48zM0 432c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V128H0v304zm352-232c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H360c-4.4 0-8-3.6-8-8v-16zm0 64c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H360c-4.4 0-8-3.6-8-8v-16zm0 64c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H360c-4.4 0-8-3.6-8-8v-16zM176 192c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zM67.1 396.2C75.5 370.5 99.6 352 128 352h8.2c12.3 5.1 25.7 8 39.8 8s27.6-2.9 39.8-8h8.2c28.4 0 52.5 18.5 60.9 44.2 3.2 9.9-5.2 19.8-15.6 19.8H82.7c-10.4 0-18.8-10-15.6-19.8z">
+                        </path>
+                    </svg>
+                    <span class="link-text">Contact</span>
+                </a>
+            </li>
+
+            <li class="nav-item no-phone">
+                <a href="faq.html" class="nav-link">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="question"
+                        class="svg-inline--fa fa-question fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 384 512" style="transform: scale(0.8);">
+                        <path fill="currentColor" class="fa-primary"
+                            d="M202.021 0C122.202 0 70.503 32.703 29.914 91.026c-7.363 10.58-5.093 25.086 5.178 32.874l43.138 32.709c10.373 7.865 25.132 6.026 33.253-4.148 25.049-31.381 43.63-49.449 82.757-49.449 30.764 0 68.816 19.799 68.816 49.631 0 22.552-18.617 34.134-48.993 51.164-35.423 19.86-82.299 44.576-82.299 106.405V320c0 13.255 10.745 24 24 24h72.471c13.255 0 24-10.745 24-24v-5.773c0-42.86 125.268-44.645 125.268-160.627C377.504 66.256 286.902 0 202.021 0zM192 373.459c-38.196 0-69.271 31.075-69.271 69.271 0 38.195 31.075 69.27 69.271 69.27s69.271-31.075 69.271-69.271-31.075-69.27-69.271-69.27z">
+                        </path>
+                    </svg>
+                    <span class="link-text">FAQ</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="public_key.html" class="nav-link">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="key"
+                        class="svg-inline--fa fa-key fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor" class="fa-primary"
+                            d="M512 176.001C512 273.203 433.202 352 336 352c-11.22 0-22.19-1.062-32.827-3.069l-24.012 27.014A23.999 23.999 0 0 1 261.223 384H224v40c0 13.255-10.745 24-24 24h-40v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24v-78.059c0-6.365 2.529-12.47 7.029-16.971l161.802-161.802C163.108 213.814 160 195.271 160 176 160 78.798 238.797.001 335.999 0 433.488-.001 512 78.511 512 176.001zM336 128c0 26.51 21.49 48 48 48s48-21.49 48-48-21.49-48-48-48-48 21.49-48 48z">
+                        </path>
+                    </svg>
+                    <span class="link-text">Public Key</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="javascript:if(window.print)window.print()" class="nav-link">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="print"
+                        class="svg-inline--fa fa-print fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path class="fa-primary" fill="currentColor"
+                            d="M448 192V77.25c0-8.49-3.37-16.62-9.37-22.63L393.37 9.37c-6-6-14.14-9.37-22.63-9.37H96C78.33 0 64 14.33 64 32v160c-35.35 0-64 28.65-64 64v112c0 8.84 7.16 16 16 16h48v96c0 17.67 14.33 32 32 32h320c17.67 0 32-14.33 32-32v-96h48c8.84 0 16-7.16 16-16V256c0-35.35-28.65-64-64-64zm-64 256H128v-96h256v96zm0-224H128V64h192v48c0 8.84 7.16 16 16 16h48v96zm48 72c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24s24 10.74 24 24c0 13.25-10.75 24-24 24z">
+                        </path>
+                    </svg>
+                    <span class="link-text">Print</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1><mark>Crypto</mark>currencies</h1>
+
+        <br>
+
+        <div class="flex-container">
+            <div class="flex-item">
                 <figure>
-                    <img src="./crypto_qr/Ethereum_QR.png" alt="ethereum">
+                    <img src="img/crypto_qr/Ethereum_QR.png" alt="ethereum">
                     <figcaption>
                         <p><a href="https://blockchain.com/eth/address/0x56Ca82a9338f814A0104c258BE44E68e09c5932c"
                                 target="_blank">Ethereum<br>(ETH | Ξ)</a></p>
@@ -52,9 +148,9 @@
                 </figure>
             </div>
 
-            <div>
+            <div class="flex-item">
                 <figure>
-                    <img src="./crypto_qr/Cardano_QR.png" alt="cardano">
+                    <img src="img/crypto_qr/Cardano_QR.png" alt="cardano">
                     <figcaption>
                         <p><a href="https://cardanoscan.io/address/addr1qyhflxssnqx4rkg7a6c3phrjqxrj3a0w2mfar0xdgnyg0gr9vp7qqsvdrdkc3ldjy6m3sknftcrc98vxpn6tspdkn4eqrnykwz"
                                 target="_blank">Cardano<br>(ADA | ₳)</a></p>
@@ -63,10 +159,10 @@
             </div>
         </div>
 
-        <div class="container">
-            <div>
+        <div class="flex-container">
+            <div class="flex-item">
                 <figure>
-                    <img src="./crypto_qr/Bitcoin_QR.png" alt="bitcoin">
+                    <img src="img/crypto_qr/Bitcoin_QR.png" alt="bitcoin">
                     <figcaption>
                         <p><a href="https://blockchain.com/btc/address/14dgj1VrazqWQnjTSSLVWLNanaZiNrrTsF"
                                 target="_blank">Bitcoin<br>(BTC | ₿)</a></p>
@@ -74,9 +170,9 @@
                 </figure>
             </div>
 
-            <div>
+            <div class="flex-item">
                 <figure>
-                    <img src="./crypto_qr/Litecoin_QR.png" alt="bitcoin">
+                    <img src="img/crypto_qr/Litecoin_QR.png" alt="bitcoin">
                     <figcaption>
                         <p><a href="https://blockchair.com/litecoin/address/LaHc8C7sbXVaUhhZudefLHLX1PaDBMXCfk"
                                 target="_blank">Litecoin<br>(LTC | Ł)</a></p>
@@ -85,14 +181,7 @@
             </div>
         </div>
 
-        <br />
-        <hr>
-
-        <p class="homepage no-print">
-            <a href="https://P74.ir">Main Page</a>
-        </p>
-
-    </div>
+    </main>
 </body>
 
 </html>
