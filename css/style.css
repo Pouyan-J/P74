@@ -7,7 +7,7 @@
 
 :root {
     font-size: 14px;
-    font-family: 'Play' sans-serif;
+    font-family: 'Play', sans-serif;
     --color_background: #000000;
     --color_secondary: #101010;
     --color_tertiary: #c0c0c0;
