@@ -9,10 +9,10 @@
 :root {
     font-size: 14px;
     font-family: "Play", sans-serif;
-    --color_background: #000000;
-    --color_secondary: #0a0a0a;
-    --color_tertiary: #c0c0c0;
-    --color_foreground: #ffffff;
+    --color_background: #000000;    /* black */
+    --color_secondary: #202124;     /* raisin black */
+    --color_tertiary: #c0c0c0;      /* silver */
+    --color_foreground: #ffffff;    /* white */
     --color_gr: #00ccff;
     --color_sc: #02fe17;
     --color_r6: #ba000c;
