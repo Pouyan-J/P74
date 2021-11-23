@@ -7,4 +7,5 @@ Disallow: /public_key.pem
 Disallow: /public_key
 Disallow: /crypto
 Disallow: /crypto.html
-Disallow: /crypto_qr/*
+Disallow: /img/crypto_qr/*
+Disallow: /img/poster/*
