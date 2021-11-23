@@ -144,6 +144,11 @@ main hr.title {
     margin-bottom: 2rem;
 }
 
+main hr.lite {
+    background-color: var(--color_secondary);
+    border: 1px solid var(--color_secondary);
+}
+
 main .subtitle {
     font-size: var(--fontSize_s);
     margin-bottom: 1rem;
@@ -190,6 +195,19 @@ button.pk:active {
     background-color: var(--color_background);
     color: var(--color_foreground);
     transition: var(--transition_speed);
+}
+
+.normal-img {
+    width: 50%;
+}
+
+.wide-img {
+    width: 100%;
+}
+
+.small-img {
+    height: 10vw;
+    padding: 1rem;
 }
 
 /*#endregion main*/
@@ -415,6 +433,9 @@ h1.main-title {
         line-height: 2rem;
         letter-spacing: 0.05rem;
         font-size: 65%;
+    }
+    .normal-img {
+        width: 100%;
     }
     .no-phone {
         display: none;
