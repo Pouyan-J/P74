@@ -1,0 +1,99 @@
+:root {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+}
+
+#title-block-header {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+#wrapper {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+#wrapper p {
+    text-align: justify;
+    text-justify: auto;
+}
+
+.no-bullet li {
+    list-style-type: none;
+}
+
+ol.roman-parentheses {
+    counter-reset: list;
+}
+
+ol.roman-parentheses > li {
+    list-style: none;
+    counter-increment: list;
+}
+
+ol.roman-parentheses > li::marker {
+    content: "(" counter(list, lower-roman) ")\a0";
+}
+
+ol.alpha-parentheses {
+    counter-reset: list;
+}
+
+ol.alpha-parentheses > li {
+    list-style: none;
+    counter-increment: list;
+}
+
+ol.alpha-parentheses > li::marker {
+    content: "(" counter(list, lower-alpha) ")\a0";
+}
+
+ol.num-parentheses {
+    counter-reset: list;
+}
+
+ol.num-parentheses > li {
+    list-style: none;
+    counter-increment: list;
+}
+
+ol.num-parentheses > li::marker {
+    content: "[" counter(list, decimal) "]\a0";
+}
+
+
+td {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    background-color: white;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: black;
+}
+
+@media only screen and (max-width: 600px) {
+    #wrapper {
+        width: 90vw;
+    }
+
+    #title-block-header {
+        width: 90vw;
+    }
+}
