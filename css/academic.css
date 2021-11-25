@@ -72,6 +72,10 @@ table.center {
     margin-right: auto;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     background-color: white;
 }
@@ -95,5 +99,28 @@ body::-webkit-scrollbar-thumb {
 
     #title-block-header {
         width: 90vw;
+    }
+}
+
+@media print {
+    a {
+        color: blue;
+    }
+    a.print-link {
+        text-decoration: underline;
+    }
+    a.print-link:link:after,
+    a.print-link:visited:after {
+        content: " [" attr(href) "] ";
+    }
+    .no-print {
+        display: none !important;
+    }
+    #title-block-header {
+        width: 100vw;
+    }
+    
+    #wrapper {
+        width: 100vw;
     }
 }
