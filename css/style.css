@@ -90,7 +90,6 @@ main h2 {
 
 main h3 {
     font-size: var(--fontSize_3);
-    margin-bottom: 1rem;
 }
 
 main h4 {
