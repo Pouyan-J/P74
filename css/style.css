@@ -209,6 +209,20 @@ button.pk:active {
     padding: 1rem;
 }
 
+.spoiler {
+    text-shadow: 0 0 0.6rem var(--color_foreground);
+    color: transparent;
+    user-select: none;
+    transition: var(--transition_speed);
+}
+
+.spoiler:hover {
+    color: inherit;
+    text-shadow: none;
+    user-select: auto;
+    transition: var(--transition_speed);
+}
+
 /*#endregion main*/
 
 /*#region box*/
