@@ -262,6 +262,10 @@ h1.main-title {
     background-color: var(--color_secondary);
 }
 
+.flex-text li:active {
+    filter: invert(100%);
+}
+
 @media (max-width: 800px) {
     .flex-container {
         flex-direction: column;
