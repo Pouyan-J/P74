@@ -545,6 +545,11 @@ h1.main-title {
     a:visited:after {
         content: ": [" attr(href) "] ";
     }
+    .spoiler {
+        color: inherit;
+        text-shadow: none;
+        user-select: auto;
+    }
     .no-print {
         display: none !important;
     }
