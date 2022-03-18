@@ -310,9 +310,21 @@
 
         <article id="apollo">
             <h2>Did the Apollo moon landings happen?</h2>
-            <p class="no-justify">
-                Yes.
+            <p class="no-justify" id="changeYesText">
+                Yes
             </p>
+
+            <script type="text/javascript">
+                var text = ['Yes', 'Ja', 'Да', '<span class="fa">آری</class>', 'Jes',
+                'Ναί', 'Oui', 'Sí', 'Kyllä', 'Evet', '<span class="fa">نعم</span>',
+                'Ndiyo', 'हां', 'はい', '对', '👍', '1'];
+                var elem = document.getElementById("changeYesText");
+                var inst = setInterval(change, 1000);
+        
+                function change() {
+                    elem.innerHTML = text[Math.floor(Math.random() * text.length)];
+                }
+            </script>
 
             <div style="text-align: center;">
                 <figure>
