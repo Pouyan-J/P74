@@ -260,10 +260,12 @@ h1.main-title {
 
 .flex-text li:hover {
     background-color: var(--color_secondary);
+    transition: var(--transition_speed);
 }
 
 .flex-text li:active {
     filter: invert(100%);
+    transition: var(--transition_speed);
 }
 
 @media (max-width: 800px) {
