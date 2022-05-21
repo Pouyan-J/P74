@@ -223,6 +223,10 @@ button.pk:active {
     transition: var(--transition_speed);
 }
 
+main a img:hover {
+    filter: saturate(4);
+}
+
 /*#endregion main*/
 
 /*#region box*/
