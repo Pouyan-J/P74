@@ -18,10 +18,12 @@
         <title>Interests and Preferences</title>
 
         <style>
-            p:not(.no-justify) {
-                text-align: justify;
-                text-justify: newspaper;
-                hyphens: auto;
+            @media only screen and (min-width: 600px) {
+                p:not(.no-justify) {
+                    text-align: justify;
+                    text-justify: newspaper;
+                    hyphens: auto;
+                }
             }
 
             h3,
@@ -447,14 +449,18 @@
                 <h3 id="color">Color</h3>
                 <h4 id="jetblack">Jet Black</h4>
                 <p>Because it's cool!</p>
-                <ul>
-                    <li>HEX = #0E0E10</li>
-                    <li>RGB = (14, 14, 16)</li>
-                    <li>HSL = (240°, 7%, 6%)</li>
-                    <li>HSV = (240°, 13%, 6%)</li>
-                    <li>CMYK = (12%, 12%, 0%, 94%)</li>
-                    <li><input readonly type="color" value="#0E0E10" /></li>
-                </ul>
+                <!--input class="no-print" readonly type="color" value="#0E0E10" style="width: 50%; color=black;"/>
+                <br /-->
+                <textarea class='small-area' rows="10" cols="40" readonly style="background-color: #0E0E10;">HEX  = #0E0E10
+RGB  = (14, 14, 16)
+HSL  = (240°, 7%, 6%)
+HSV  = (240°, 13%, 6%)
+HWB  = (240°, 5%, 94%)
+XYZ  ≈ (0.432, 0.445, 0.553)
+LAB  ≈ (4.018, 0.362, -0.985)
+CMY  ≈ (94%, 94%, 93%)
+CMYK ≈ (12%, 12%, 0%, 94%)
+Ncol ≈ (B0, 5%, 94%)</textarea>
             </article>
 
             <hr class="lite" />
@@ -644,6 +650,9 @@
                         Business Professionals (Cole N. Knaflic)
                     </li>
                     <li>Guns, Germs, and Steel (Jared Diamond)</li>
+                    <li>Sapiens: A Brief History of Humankind (Yuval Noah Harari)</li>
+                    <li>Homo Deus: A Brief History of Tomorrow (Yuval Noah Harari)</li>
+                    <li>Blown to Bits: Your Life, Liberty, and Happiness After the Digital Explosion (Hal Abelson, Ken Ledeen, Harry Lewis)</li>
                 </ul>
 
                 <div class="center">
@@ -720,7 +729,7 @@
                 <h3 id="animal">Animal</h3>
 
                 <h4 id="cat">Cat (Felis Catus)</h4>
-                <p>Stardenburdenhardenbart!</p>
+                <p>Stardenburdenhardenbart! 🐈‍⬛🐈</p>
 
                 <div class="center">
                     <img
