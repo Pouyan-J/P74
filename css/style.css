@@ -171,6 +171,20 @@ main #pk_area {
     color: var(--text-color);
 }
 
+main .small-area {
+    width: 50%;
+    height: 50%;
+    padding: 1rem 1rem;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    background-color: rgba(0, 0, 0, 0);
+    resize: none;
+    line-height: 1em;
+    font-size: 1.5vw;
+    font-family: monospace;
+    color: var(--text-color);
+}
+
 button.pk {
     width: 50%;
     padding: 1vw;
@@ -457,6 +471,12 @@ h1.main-title {
         letter-spacing: 0.05rem;
         font-size: 65%;
     }
+
+    main .small-area {
+        width: 100%;
+        font-size: 65%;
+    }
+
     .normal-img {
         width: 100%;
     }

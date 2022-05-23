@@ -18,10 +18,15 @@
         <title>FAQ</title>
 
         <style>
+            @media only screen and (min-width: 600px) {
+                p:not(.no-justify) {
+                    text-align: justify;
+                    text-justify: newspaper;
+                    hyphens: auto;
+                }
+            }
+
             p:not(.no-justify) {
-                text-align: justify;
-                text-justify: newspaper;
-                hyphens: auto;
                 margin-bottom: 1rem;
             }
         </style>
