@@ -9,3 +9,4 @@ Disallow: /crypto
 Disallow: /crypto.html
 Disallow: /img/crypto_qr/*
 Disallow: /img/poster/*
+Disallow: /files/*
