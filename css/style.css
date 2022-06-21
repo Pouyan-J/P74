@@ -237,6 +237,10 @@ button.pk:active {
     transition: var(--transition_speed);
 }
 
+.inactive {
+    opacity: 40%;
+}
+
 main a img:hover {
     filter: saturate(4);
 }
