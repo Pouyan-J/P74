@@ -329,8 +329,8 @@
 
             <hr />
 
-            <article id="pe">
-                <h2>What is with PE dates?</h2>
+            <article id="date">
+                <h2>What is with JH dates?</h2>
                 <p>
                     Before anything else, please note that this is a personal
                     website. Additionally, no version of
@@ -351,12 +351,10 @@
                         ></i
                     >
                     is just about what could be called a perfect solar calendar
-                    for the needs of the <sub>CE</sub>21<sup>st</sup> century.
+                    for the needs of the 21<sup>st</sup>CE century.
                     Each year of this calendar begins exactly on the spring
                     equinox, followed by subsequent solstices and equinoxes to
                     determine the beginning of other seasons as well.
-                </p>
-                <p>
                     As an acclamation for Persian history, I would like to
                     utilize a particular variant of this calendar, known as the
                     <i>Persian Imperial calendar</i>. The origin of this variant
@@ -365,14 +363,50 @@
                         href="https://www.britannica.com/biography/Cyrus-the-Great"
                         >Cyrus the Great</a
                     >
-                    which occurred during 559<sub>BCE</sub>.
-                    <br />
-                    <abbr title="Persian Empire">PE</abbr>
-                    (De: <abbr title="Persisches Königreich">PK</abbr> | Ru:
-                    <abbr title="Персидская Империя">ПИ</abbr> | Fa:
-                    <span class="fa"
-                        ><abbr title="شاهنشاهی پارسی">ش.پ</abbr></span
-                    >) stands for <i>Persian Empire</i>.
+                    which occurred during 559 BCE.
+                </p>
+                <p>
+                    Another calendar that fascinates me is the
+                    <i><a href="https://en.wikipedia.org/wiki/Holocene_calendar">Holocene calendar</a></i>.
+                    It is the same as the Gregorian calendar (which is a
+                    downside!), except for the year which is added by 10,000
+                    <script type="text/javascript">
+                        ger_year = new Date().getFullYear();
+                        jhe_year = ger_year + 10000;
+                        document.write(`(e.g. ${ger_year} CE would be ${jhe_year} HE).`);
+                    </script>
+                    <noscript>
+                        (e.g. 2022 CE would be 12022 HE).
+                    </noscript>
+                    The idea is to place the
+                    beginning of the calendar “near” the beginning of the Holocene geological epoch, aiming to cover the entire written
+                    history of humankind, as well as a significant series of events that led to the rise of the earliest major human
+                    civilizations.
+                    I like the idea of adding ten thousand years to the calendar. However, I add them to the Persian Imperial calendar
+                    to create my own "Jalali-grade" recorded-history-covering calender, which I call: <i>Jalali Holocene calendar</i>.
+                </p>
+                <p>
+                <ul>
+                    <li>
+                        <b>English:</b> JH = Jalali Holocene Era
+                    </li>
+                    <li>
+                        <b>German:</b> DH = Dschalali Holozän-Ära
+                    </li>
+                    <li>
+                        <b>Russian:</b> <span class="ru">ДГ</span> = <span class="ru">Джалали Голоценовая Эра</span>
+                    </li>
+                    <li>
+                        <b>Persian:</b>
+                        <span class="fa">
+                            دوران هولوسین جلالی
+                        </span>
+                        =
+                        <span class="fa">
+                            ه.ج
+                        </span>
+                    </li>
+                </ul>
                 </p>
                 <p id="today">
                     <script type="text/javascript">
@@ -381,16 +415,14 @@
                             month: "2-digit",
                             day: "2-digit",
                         };
-                        var pe = new Date(
-                            new Date().setFullYear(
-                                new Date().getFullYear() + 1180
-                            )
-                        )
+                        var persian_date =
+                            new Date()
                             .toLocaleDateString("fa-IR", options)
                             .replace(/([۰-۹])/g, (token) =>
                                 String.fromCharCode(token.charCodeAt(0) - 1728)
-                            );
-                        document.write(`Today is ${pe}<sub>PE</sub>`);
+                            ).split("/").reverse();
+                        jh = [persian_date[0], persian_date[1], parseInt(persian_date[2]) + 11180].join(".");
+                        document.write(`Today is ${jh} JH`);
                     </script>
                 </p>
             </article>
@@ -502,7 +534,7 @@
                             class="normal-img"
                         />
                         <figcaption>
-                            AS12-48-7134 (cropped) | PE 2528.08.29 | Alan L.
+                            AS12-48-7134 (cropped) | 29.08.12528 JH | Alan L.
                             Bean Inspecting Surveyor 3 | Apollo 12 (EVA-2)
                         </figcaption>
                     </figure>
