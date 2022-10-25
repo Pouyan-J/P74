@@ -188,7 +188,7 @@
             <article id="pouyan">
                 <h2>What is the meaning of Pouyan?</h2>
                 <p class="no-justify">
-                    <i>Pouyan</i> is a Persian given name, literally meaning
+                    <i class="nv">Pouyan</i> is a Persian given name, literally meaning
                     "dynamic" or "seeker".
                 </p>
                 <br />
@@ -203,7 +203,7 @@
             <hr />
 
             <article id="01001010">
-                <h2>What are the meanings 74 and 01001010?</h2>
+                <h2>What do 74 and 01001010 mean?</h2>
                 <p>
                     Both 74<sub>10</sub> and 1001010<sub>2</sub> are the
                     <a
@@ -211,8 +211,8 @@
                         target="_blank"
                         >ASCII</a
                     >
-                    values of <i>J</i> (which is the initial of my surname –
-                    <b>J</b>aberi).
+                    values of 'J' (which is the initial of my surname –
+                    <b class="nv">J</b>aberi).
                 </p>
 
                 <br />
@@ -342,14 +342,10 @@
                 </p>
                 <p>
                     Long story short, I trust that the
-                    <i>Gregorian calendar</i> is primarily a religious one and
+                    Gregorian calendar is primarily a religious one and
                     inappropriate for modern-day use-cases. In contrast, the
-                    <i
-                        ><a
-                            href="https://www.timeanddate.com/calendar/persian-calendar.html"
-                            >Jalali calendar</a
-                        ></i
-                    >
+                    <a href="https://www.timeanddate.com/calendar/persian-calendar.html">
+                        Jalali calendar</a>
                     is just about what could be called a perfect solar calendar
                     for the needs of the 21<sup>st</sup>CE century.
                     Each year of this calendar begins exactly on the spring
@@ -367,7 +363,7 @@
                 </p>
                 <p>
                     Another calendar that fascinates me is the
-                    <i><a href="https://en.wikipedia.org/wiki/Holocene_calendar">Holocene calendar</a></i>.
+                    <a href="https://en.wikipedia.org/wiki/Holocene_calendar">Holocene calendar</a>.
                     It is the same as the Gregorian calendar (which is a
                     downside!), except for the year which is added by 10,000
                     <script type="text/javascript">
@@ -383,48 +379,70 @@
                     history of humankind, as well as a significant series of events that led to the rise of the earliest major human
                     civilizations.
                     I like the idea of adding ten thousand years to the calendar. However, I add them to the Persian Imperial calendar
-                    to create my own "Jalali-grade" recorded-history-covering calender, which I call: <i>Jalali Holocene calendar</i>.
+                    to create my own "Jalali-grade" recorded-history-covering calender, which I call: <span class="nv">Jalali Holocene calendar</span>.
                 </p>
                 <p>
-                <ul>
-                    <li>
-                        <b>English:</b> JH = Jalali Holocene Era
-                    </li>
-                    <li>
-                        <b>German:</b> DH = Dschalali Holozän-Ära
-                    </li>
-                    <li>
-                        <b>Russian:</b> <span class="ru">ДГ</span> = <span class="ru">Джалали Голоценовая Эра</span>
-                    </li>
-                    <li>
-                        <b>Persian:</b>
-                        <span class="fa">
-                            دوران هولوسین جلالی
-                        </span>
-                        =
-                        <span class="fa">
-                            ه.ج
-                        </span>
-                    </li>
-                </ul>
+                    <ul>
+                        <li>
+                            <b>En:</b> JH = Jalali Holocene Era
+                        </li>
+                        <li>
+                            <b>De:</b> DH = Dschalali Holozän-Ära
+                        </li>
+                        <li>
+                            <b>Ru:</b> <span class="ru">ДГ</span> = <span class="ru">Джалали Голоценовая Эра</span>
+                        </li>
+                        <li>
+                            <b>Fa:</b>
+                            <span class="fa">
+                                دوران هولوسین جلالی
+                            </span>
+                            =
+                            <span class="fa">
+                                ه.ج
+                            </span>
+                        </li>
+                    </ul>
                 </p>
+                <p>
+                    <input type="date" name="date picker" id="date-picker" min="0622-03-21"
+                    style="font-family: Play; font-size: 2rem; background-color: silver;"> <span id="convertor"></span>
+                </p>
+
                 <p id="today">
-                    <script type="text/javascript">
-                        var options = {
+                </p>
+
+                <script type="text/javascript">
+                    function to_persian_date_array(date) {
+                        let options = {
                             year: "numeric",
                             month: "2-digit",
                             day: "2-digit",
-                        };
-                        var persian_date =
-                            new Date()
+                        }
+
+                        return new Date(date)
                             .toLocaleDateString("fa-IR", options)
                             .replace(/([۰-۹])/g, (token) =>
-                                String.fromCharCode(token.charCodeAt(0) - 1728)
-                            ).split("/").reverse();
-                        jh = [persian_date[0], persian_date[1], parseInt(persian_date[2]) + 11180].join(".");
-                        document.write(`Today is ${jh} JH`);
-                    </script>
-                </p>
+                                String.fromCharCode(token.charCodeAt(0) - 1728))
+                            .split("/");
+                    }
+
+                    function date_formatter(date, year_increment=0) {
+                        return [date[2], date[1], parseInt(date[0]) + year_increment].join(".");
+                    }
+
+                    let jh = date_formatter(to_persian_date_array(new Date()), 11180);
+                    document.getElementById("today").innerHTML = `Today is <span class="nv"><b>${jh} JH</b></span>`;
+                    
+                    document.getElementById("date-picker").addEventListener("change", function () {
+                        let input_date = this.value.split("-");
+                        let gr_date = date_formatter(input_date);
+                        let sh_date = date_formatter(to_persian_date_array(input_date));
+                        let pe_date = date_formatter(to_persian_date_array(input_date), 1180);
+                        let jh_date = date_formatter(to_persian_date_array(input_date), 11180);
+                        document.getElementById("convertor").innerHTML = ` = ${sh_date} SH = ${pe_date} PE = <b>${jh_date} JH</b>`;
+                    });
+                </script>
             </article>
 
             <hr />
