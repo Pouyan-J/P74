@@ -100,6 +100,7 @@ main p,
 a,
 ul,
 td,
+th,
 blockquote {
     font-size: var(--fontSize_n);
 }
@@ -108,9 +109,10 @@ main blockquote {
     margin: 1rem 5rem;
 }
 
-main td {
+main td, th {
     border: solid var(--color_tertiary);
     padding: 0.5% 1%;
+    text-align: left;
 }
 
 main mark {
@@ -225,6 +227,12 @@ button.pk:active {
 .small-img {
     height: 10vw;
     padding: 1rem;
+}
+
+.medium-img {
+    height: 25vw;
+    padding: 1rem;
+    
 }
 
 .spoiler {
@@ -450,7 +458,7 @@ h1.main-title {
         margin: 0;
         margin-bottom: 5rem;
     }
-    main td {
+    main td, th {
         font-size: var(--fontSize_s);
     }
     main blockquote {
@@ -541,7 +549,7 @@ h1.main-title {
     .no-phone {
         display: none;
     }
-    main td {
+    main td, th {
         font-size: var(--fontSize_s);
     }
     main .longtext {
