@@ -602,3 +602,9 @@ h1.main-title {
 }
 
 /*#endregion print*/
+
+@media (prefers-reduced-motion) {
+    :root {
+        --transition_speed: 0ms;
+    }
+}
