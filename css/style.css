@@ -60,6 +60,7 @@ main {
     --fontSize_3: 2.25rem;
     --fontSize_n: 2rem;
     --fontSize_s: 1.5rem;
+    --fontSize_m: 1rem;
     opacity: 0.9;
     background-color: var(--color_background);
     z-index: -1;
@@ -103,6 +104,25 @@ td,
 th,
 blockquote {
     font-size: var(--fontSize_n);
+}
+
+main sup, sub {
+    font-size: var(--fontSize_m)
+}
+
+.supsub {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    vertical-align: middle;
+    font-size: var(--fontSize_m);
+}
+
+.supsub_n {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    vertical-align: middle;
 }
 
 main blockquote {
