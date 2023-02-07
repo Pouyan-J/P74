@@ -17,7 +17,7 @@
 
     <style>
         img {
-            width: 20vw;
+            width: 15vw;
         }
 
         figcaption {
@@ -38,7 +38,7 @@
 
         @media print {
             img {
-                width: 20vw;
+                width: 15vw;
             }
         }
     </style>
@@ -132,18 +132,33 @@
         </ul>
     </nav>
 
-    <main>
+    <main class="boxed">
         <h1><mark>Crypto</mark>currencies</h1>
 
-        <br>
+        <p style="
+        font-size: var(--fontSize_s);
+        padding: 1rem 0 1.5rem 0;">
+            <b>Disclaimer:</b> Here are my wallet IDs of some cryptocurrencies I feel enthusiastic about. I am not a
+            professional investor or regular user of cryptocurrencies; I just enjoy studying their technical aspect. I
+            do NOT financially recommend (or necessarily disregard) any of the mentioned blockchain technologies and
+            their native tokens.
+        </p>
 
         <div class="flex-container">
             <div class="flex-item">
                 <figure>
                     <img src="img/crypto_qr/Ethereum_QR.png" alt="ethereum">
                     <figcaption>
-                        <p><a href="https://blockchain.com/eth/address/0x56Ca82a9338f814A0104c258BE44E68e09c5932c"
-                                target="_blank">Ethereum<br>(ETH | Ξ)</a></p>
+                        <p>Ethereum<br>(ETH | Ξ)</p>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="flex-item">
+                <figure>
+                    <img src="img/crypto_qr/Bitcoin_QR.png" alt="bitcoin">
+                    <figcaption>
+                        <p>Bitcoin<br>(BTC | ₿)</p>
                     </figcaption>
                 </figure>
             </div>
@@ -152,35 +167,20 @@
                 <figure>
                     <img src="img/crypto_qr/Cardano_QR.png" alt="cardano">
                     <figcaption>
-                        <p><a href="https://cardanoscan.io/address/addr1qyhflxssnqx4rkg7a6c3phrjqxrj3a0w2mfar0xdgnyg0gr9vp7qqsvdrdkc3ldjy6m3sknftcrc98vxpn6tspdkn4eqrnykwz"
-                                target="_blank">Cardano<br>(ADA | ₳)</a></p>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-
-        <div class="flex-container">
-            <div class="flex-item">
-                <figure>
-                    <img src="img/crypto_qr/Bitcoin_QR.png" alt="bitcoin">
-                    <figcaption>
-                        <p><a href="https://blockchain.com/btc/address/14dgj1VrazqWQnjTSSLVWLNanaZiNrrTsF"
-                                target="_blank">Bitcoin<br>(BTC | ₿)</a></p>
+                        <p>Cardano<br>(ADA | ₳)</p>
                     </figcaption>
                 </figure>
             </div>
 
             <div class="flex-item">
                 <figure>
-                    <img src="img/crypto_qr/Litecoin_QR.png" alt="bitcoin">
+                    <img src="img/crypto_qr/Monero_QR.png" alt="monero">
                     <figcaption>
-                        <p><a href="https://blockchair.com/litecoin/address/LaHc8C7sbXVaUhhZudefLHLX1PaDBMXCfk"
-                                target="_blank">Litecoin<br>(LTC | Ł)</a></p>
+                        <p>Monero<br>(XMR | ɱ)</p>
                     </figcaption>
                 </figure>
             </div>
         </div>
-
     </main>
 </body>
 
