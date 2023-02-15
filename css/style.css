@@ -9,10 +9,10 @@
 :root {
     font-size: 14px;
     font-family: "Play", sans-serif;
-    --color_background: #000000;    /* black */
-    --color_secondary: #202124;     /* raisin black */
-    --color_tertiary: #c0c0c0;      /* silver */
-    --color_foreground: #ffffff;    /* white */
+    --color_background: #000000;
+    --color_secondary: #202124;
+    --color_tertiary: #c0c0c0;
+    --color_foreground: #ffffff;
     --color_gr: #00ccffcf;
     --color_sc: #02fe17;
     --color_r6: #ff0011;
@@ -45,6 +45,25 @@ body::-webkit-scrollbar-thumb {
     background: var(--color_tertiary);
 }
 
+::-moz-selection {
+    color: var(--color_background);
+    background: var(--color_foreground);
+}
+
+::selection {
+    color: var(--color_background);
+    background: var(--color_foreground);
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .fa {
     font-family: "Shabnam", sans-serif;
     font-size: 90%;
@@ -64,6 +83,8 @@ main {
     opacity: 0.9;
     background-color: var(--color_background);
     z-index: -1;
+
+    overflow-x: hidden;
 }
 
 main ul {
@@ -106,7 +127,8 @@ blockquote {
     font-size: var(--fontSize_n);
 }
 
-main sup, sub {
+main sup,
+sub {
     font-size: var(--fontSize_m)
 }
 
@@ -129,7 +151,8 @@ main blockquote {
     margin: 1rem 5rem;
 }
 
-main td, th {
+main td,
+th {
     border: solid var(--color_tertiary);
     padding: 0.5% 1%;
     text-align: left;
@@ -192,9 +215,9 @@ main #pk_area {
     background-color: rgba(0, 0, 0, 0);
     resize: none;
     line-height: 2em;
-    font-size: 1.5vw;
+    font-size: 1.5em;
     font-family: monospace;
-    color: var(--text-color);
+    color: var(--color_foreground);
 }
 
 main .small-area {
@@ -206,9 +229,9 @@ main .small-area {
     background-color: rgba(0, 0, 0, 0);
     resize: none;
     line-height: 1em;
-    font-size: 1.5vw;
+    font-size: 1.5em;
     font-family: monospace;
-    color: var(--text-color);
+    color: var(--color_foreground);
 }
 
 button.pk {
@@ -252,7 +275,7 @@ button.pk:active {
 .medium-img {
     height: 25vw;
     padding: 1rem;
-    
+
 }
 
 .spoiler {
@@ -304,6 +327,13 @@ h1.main-title {
 
 .flex-text li {
     padding: 0.25rem;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .flex-text li a {
@@ -351,6 +381,13 @@ h1.main-title {
 
 .nav-item {
     width: 100%;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .nav-item:last-child:not(.no-margin) {
@@ -455,6 +492,7 @@ h1.main-title {
     min-width: 2rem;
     margin: 0 1.5rem;
 }
+
 /*#endregion desktop*/
 
 /*#region small-screens*/
@@ -463,37 +501,48 @@ h1.main-title {
     :root {
         font-size: 10px;
     }
+
     .navbar {
         bottom: 0;
         width: 100vw;
         height: 5rem;
     }
+
     .navbar-nav {
         flex-direction: row;
     }
+
     .nav-link {
         justify-content: center;
     }
+
     main {
         margin: 0;
         margin-bottom: 5rem;
     }
-    main td, th {
+
+    main td,
+    th {
         font-size: var(--fontSize_s);
     }
+
     main blockquote {
         margin: 1em 0.5em;
         text-align: center;
     }
+
     main .description {
         width: 100%;
     }
+
     main .longtext {
         font-size: 0.75em;
     }
+
     .boxed {
         margin: 5% 5% 20% 5%;
     }
+
     button.pk {
         width: 100%;
         float: none;
@@ -501,6 +550,7 @@ h1.main-title {
         padding: 1vh 1vw;
         font-size: 3vw;
     }
+
     main #pk_area {
         padding: 1rem 1rem;
         line-height: 2rem;
@@ -510,12 +560,12 @@ h1.main-title {
 
     main .small-area {
         width: 100%;
-        font-size: 65%;
     }
 
     .normal-img {
         width: 100%;
     }
+
     .no-phone {
         display: none;
     }
@@ -525,6 +575,7 @@ h1.main-title {
     .nav-item:last-child {
         display: none;
     }
+
     main #pk_area {
         font-size: 50%;
     }
@@ -540,12 +591,15 @@ h1.main-title {
         width: 5rem;
         height: 100vh;
     }
+
     .navbar:hover {
         width: 16rem;
     }
+
     .navbar:hover .link-text {
         display: inline;
     }
+
     .boxed {
         margin: 3% 10% 3% 15%;
     }
@@ -555,23 +609,30 @@ h1.main-title {
     :root {
         font-size: 12px;
     }
+
     .navbar {
         top: 0;
         width: 5rem;
         height: 100vh;
     }
+
     .navbar:hover {
         width: 16rem;
     }
+
     .navbar:hover .link-text {
         display: inline;
     }
+
     .no-phone {
         display: none;
     }
-    main td, th {
+
+    main td,
+    th {
         font-size: var(--fontSize_s);
     }
+
     main .longtext {
         font-size: 0.75em;
     }
@@ -592,30 +653,37 @@ h1.main-title {
         --color_sc: black;
         --color_r6: black;
     }
+
     body {
         background-image: none !important;
     }
+
     main {
         margin-left: 0;
         padding: 0;
         opacity: 1 !important;
     }
+
     main mark {
         background-color: var(--color_background);
         color: var(--color_foreground);
     }
+
     main .description {
         width: auto;
     }
+
     a:link:after,
     a:visited:after {
         content: ": [" attr(href) "] ";
     }
+
     .spoiler {
         color: inherit;
         text-shadow: none;
         user-select: auto;
     }
+
     .no-print {
         display: none !important;
     }
@@ -623,8 +691,60 @@ h1.main-title {
 
 /*#endregion print*/
 
+/*#region accessibility*/
+
 @media (prefers-reduced-motion) {
     :root {
         --transition_speed: 0ms;
     }
 }
+
+/*#endregion accessibility*/
+
+/*#region IE*/
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    body {
+        background-image: none !important;
+        padding: 1rem;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .spoiler {
+        background-color: gray;
+        color: gray;
+        user-select: none;
+    }
+
+    .spoiler:hover {
+        background-color: transparent;
+        color: black;
+        user-select: auto;
+    }
+
+    main a:link,
+    main a:visited {
+        text-decoration: none;
+        color: blue;
+    }
+
+    main a:hover {
+        color: red;
+    }
+
+    main,
+    .boxed {
+        z-index: auto;
+    }
+
+    main mark {
+        color: #ffffff;
+        background-color: #000000;
+    }
+}
+
+/*#endregion IE*/
