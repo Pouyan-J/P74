@@ -415,7 +415,7 @@
                     let decimal_time = decimalTime(new Date(today.toDateString() + ' ' + input_time));
                     let percentage_day = (percentageDay(new Date(today.toDateString() + ' ' + input_time)) * 100).toFixed(4);
 
-                    document.getElementById("time-convertor").innerHTML = `≈ ${percentage_day}% = <b>${decimal_time}</b>`;
+                    document.getElementById("time-convertor").innerHTML = `≃ ${percentage_day}% = <b>${decimal_time}</b>`;
 
                     if ((document.getElementById("time-convertor").innerHTML).includes("N") || input_time == '') {
                         document.getElementById("time-convertor").innerHTML = ""
