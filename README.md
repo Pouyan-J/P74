@@ -3,13 +3,11 @@
 Welcome to my personal GitLab profile! :wave:
 I am a data analyst and a machine learning researcher with M.Sc. degree of software engineering. I'm interested in data science and artificial intelligence.
 
-  <p align="center">
+<p align="center">
     <a href="https://p74.ir">Website</a>
     ·
     <a href="https://gitlab.com/p74/p74/-/blob/master/README_Repo.md">Website README</a>
-    ·
-    <a href="https://github.com/arifszn/gitprofile/discussions">Request Feature</a>
-  </p>
+</p>
 
 ## Primary Skills
 
