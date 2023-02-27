@@ -1,11 +1,25 @@
-# P74
-My personal website
+# Pouyan
 
-## Disclaimer
-Clearly I know nothing about UI and I don't care either!
+Welcome to my personal GitLab profile! :wave:
+I am a data analyst and a machine learning researcher with M.Sc. degree of software engineering. I'm interested in data science and artificial intelligence.
 
-## Contributing
-Pull requests are welcome. Helping me to have a less horrible personal website is also welcome!
+## Primary Skills
+
+- Machine learning
+- Data Analysis
+- Python
+- SQL (OracleDB)
+- Tableau
+
+
+## Contact
+
+You can reach me at my personal website: [p74.ir](https://p74.ir)
+
+## Contributions
+
+Pull requests are welcome. If you have any suggestions or feedback on how to improve the website, feel free to open an issue or a pull request.
 
 ## License
-[Really?](https://gitlab.com/p74/p74/-/blob/master/LICENSE)
+
+Unless otherwise stated, all of my works under this account are licensed under the X11 license. See the [LICENSE](https://gitlab.com/p74/p74/-/blob/master/LICENSE) file for more details.
