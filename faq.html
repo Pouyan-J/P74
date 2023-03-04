@@ -28,6 +28,23 @@
             margin-bottom: 1rem;
         }
     </style>
+
+    <script type="text/javascript" src="scripts/DecimalTime.js"></script>
+    <script type="text/javascript" src="scripts/DecimalTimeUtil.js" defer></script>
+    <script type="text/javascript" src="scripts/PersianDate.js"></script>
+    <script type="text/javascript" src="scripts/PersianDateUtil.js" defer></script>
+    <script type="text/javascript" src="scripts/Yes.js" defer></script>
+
+    <noscript>
+        <style>
+            #date-picker,
+            #time-picker,
+            #random,
+            #date-time,
+            .hide-no-js
+            {display:none;}
+        </style>
+    </noscript>
 </head>
 
 <body>
@@ -349,85 +366,14 @@
             </p>
 
             <p>
-                <input type="time" name="time picker" id="time-picker"
+                <input type="time" step="1" name="time picker" id="time-picker"
                     style="font-family: Play; font-size: 2rem; background-color: silver;"> <span
                     id="time-convertor"></span>
             </p>
 
-            <p id="time&date">
+            <p id="date-time">
                 Today is <span id="today">a good day!</span> <span id="decimal-hour"></span>
             </p>
-
-            <script type="text/javascript">
-                function to_persian_date_array(date) {
-                    let options = {
-                        year: "numeric",
-                        month: "2-digit",
-                        day: "2-digit",
-                    }
-
-                    return new Date(date)
-                        .toLocaleDateString("fa-IR", options)
-                        .replace(/([۰-۹])/g, (token) =>
-                            String.fromCharCode(token.charCodeAt(0) - 1728))
-                        .split("/");
-                }
-
-                function date_formatter(date, year_increment = 0) {
-                    return [parseInt(date[0]) + year_increment, date[1], date[2]].join(".");
-                }
-
-                let jh = date_formatter(to_persian_date_array(new Date()), 11180);
-                document.getElementById("today").innerHTML = jh;
-
-                document.getElementById("date-picker").addEventListener("change", function () {
-                    let input_date = this.value.split("-");
-                    let gr_date = date_formatter(input_date);
-                    let sh_date = date_formatter(to_persian_date_array(input_date));
-                    let pe_date = date_formatter(to_persian_date_array(input_date), 1180);
-                    let jh_date = date_formatter(to_persian_date_array(input_date), 11180);
-                    document.getElementById("convertor").innerHTML = ` = ${sh_date} SH = ${pe_date} PE = <b>${jh_date} JH</b>`;
-
-                    if (document.getElementById("convertor").innerHTML.includes("NaN")) {
-                        document.getElementById("convertor").innerHTML = ""
-                    }
-                });
-            </script>
-
-            <script type="text/javascript">
-                function percentageDay(this_hour) {
-                    return (this_hour.getHours() * 3600 + this_hour.getMinutes() * 60 + this_hour.getSeconds()) / 86400;
-                }
-
-                function decimalTime(this_hour) {
-                    let percentage_day = percentageDay(this_hour)
-                    let percentage_day_string = (percentage_day * 10).toString();
-                    let decimalHours = percentage_day_string[0];
-                    let decimalMinutes = percentage_day_string.slice(2, 4).padStart(2, "0");
-                    let decimalSeconds = percentage_day_string.slice(4, 6).padStart(2, "0");
-                    return decimalHours + ":" + decimalMinutes + ":" + decimalSeconds;
-                }
-
-                document.getElementById("time-picker").addEventListener("change", function () {
-                    let input_time = this.value;
-
-                    let today = new Date();
-                    let decimal_time = decimalTime(new Date(today.toDateString() + ' ' + input_time));
-                    let percentage_day = (percentageDay(new Date(today.toDateString() + ' ' + input_time)) * 100).toFixed(4);
-
-                    document.getElementById("time-convertor").innerHTML = `≃ ${percentage_day}% = <b>${decimal_time}</b>`;
-
-                    if ((document.getElementById("time-convertor").innerHTML).includes("N") || input_time == '') {
-                        document.getElementById("time-convertor").innerHTML = ""
-                    }
-                });
-
-                function updateTime() {
-                    document.getElementById("decimal-hour").innerHTML = decimalTime(new Date());
-                }
-
-                setInterval(updateTime, 432);
-            </script>
         </article>
 
         <hr />
@@ -457,66 +403,16 @@
                         `${Math.floor(Math.random() * (1_000_000 + 1))}`
                     );
                 </script>
-                <noscript>
-                    Not until you
-                    <a href="https://www.enable-javascript.com">enable JavaScript</a>!
-                </noscript>
             </p>
         </article>
 
-        <hr />
+        <hr class="hide-no-js"/>
 
         <article id="apollo">
             <h2>Did the Apollo moon landings happen?</h2>
             <p class="no-justify" id="changeYesText" style="line-height: 1em;">
                 Yes
             </p>
-
-            <script type="text/javascript">
-                var text = [
-                    //"Yes", // English
-                    "Ja", // German
-                    "Да", // Russian
-                    '<span class="fa">آری</class>', // Persian
-                    "Jes", // Esperanto
-                    "Go'i", // Lojban
-                    "Ναί", // Greek
-                    "Oui", // French
-                    "Sí", // Spanish
-                    "Sì", // Italian
-                    "Igen", // Hungarian
-                    "Ano", // Czech
-                    "Tak", // Polish
-                    "Kyllä", // Finnish
-                    "Evet", // Turkish
-                    '<span class="fa">نعم</span>', // Arabic
-                    "Ndiyo", // Swahili
-                    "አዎ", // Amharic
-                    "כן", // Hebrew
-                    "हां", // Hindi
-                    "はい", // Japanese
-                    "对", // Mandarin
-                    "네", // Korean
-                    "👍", // Emoji
-                    "1", // Boolean
-                    "–·–·", // Morse code
-                ];
-                var elem = document.getElementById("changeYesText");
-                var inst = setInterval(change, 1000);
-                var flag = true;
-                const default_text = "Yes";
-
-                function change() {
-                    if (flag) {
-                        elem.innerHTML =
-                            text[Math.floor(Math.random() * text.length)];
-                        flag = false;
-                    } else {
-                        elem.innerHTML = default_text;
-                        flag = true;
-                    }
-                }
-            </script>
 
             <div style="text-align: center">
                 <figure>
