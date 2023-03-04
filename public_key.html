@@ -25,6 +25,12 @@ Der öffentliche Schlüssel wurde kopiert.
             );
         }
     </script>
+    <noscript>
+        <style>
+            #copy-button
+            {display:none;}
+        </style>
+    </noscript>
 
     <style>
         main {
@@ -146,17 +152,11 @@ Der öffentliche Schlüssel wurde kopiert.
     RQIDAQAB
     -----END PUBLIC KEY-----</textarea>
         <br />
-        <button class="pk no-print" onclick="pk_copy()">
+        <button id="copy-button" class="pk no-print" onclick="pk_copy()">
             Copy | Kopieren | Копировать | <span class="fa">رونوشت</span></button>
 
-        <!--a href="public_key.pem" download="public_key.pem">
-                <button class="pk">
-                    <strong>Download | Herunterladen | Скачать | دریافت</strong>
-                </button>
-            </a-->
-
         <form method="get" action="public_key.pem">
-            <button class="pk no-print">
+            <button id="download-button" class="pk no-print">
                 Download | Herunterladen | Скачать | <span class="fa">دریافت</span>
             </button>
         </form>
