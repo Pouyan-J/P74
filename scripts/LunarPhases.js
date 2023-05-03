@@ -27,12 +27,12 @@ else
 
 document.getElementById("moon-phases").src = moonPhases[lunar_phase];
 
-if (new Date().getMonth() == 5 && new Date().getDay() == 4) {
+if (new Date().getMonth() + 1 == 5 && new Date().getDate() == 4) {
     document.getElementById("moon-phases").src = 'img/poster/no-moon.png';
     document.getElementById("moon-quote").innerHTML = "“That's no moon…”" + "<br />" + "— Obi-Wan Kenobi";
 }
 
-else if (new Date().getMonth() == 7 && new Date().getDay() == 20) {
+else if (new Date().getMonth() + 1 == 7 && new Date().getDate() == 20) {
     document.getElementById("moon-phases").src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Apollo_11_Lunar_Module_Eagle_in_landing_configuration_in_lunar_orbit_from_the_Command_and_Service_Module_Columbia.jpg/534px-Apollo_11_Lunar_Module_Eagle_in_landing_configuration_in_lunar_orbit_from_the_Command_and_Service_Module_Columbia.jpg';
     document.getElementById("moon-quote").innerHTML = "“Tranquility Base here. The Eagle has landed.”"
         + "<br />" + "— Neil A. Armstrong (Apollo 11)";
