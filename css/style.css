@@ -18,6 +18,7 @@
     --color_r6: #ff0011;
     --fontFamily_main: "Play", sans-serif;
     --transition_speed: 400ms;
+    color-scheme: light only;
 }
 
 body {
