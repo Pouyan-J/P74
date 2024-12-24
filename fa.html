@@ -36,7 +36,43 @@
             margin-right: 1em;
             margin-left: 0;
         }
+
+        li .toggle::before {
+            content: '⮘ ';
+            cursor: pointer;
+        }
+
+        @media print {
+            li .toggle::before {
+                content: '⮛ ';
+            }
+        }
     </style>
+
+    <noscript>
+        <style>
+            li .hidden {
+                display: block !important;
+            }
+
+            li .toggle::before {
+                content: '⮛ ';
+            }
+        </style>
+    </noscript>
+
+    <script>
+        function toggleSublist(element) {
+            var sublist = element.nextElementSibling;
+            if (sublist.classList.contains('hidden')) {
+                sublist.classList.remove('hidden');
+                element.classList.add('open');
+            } else {
+                sublist.classList.add('hidden');
+                element.classList.remove('open');
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -220,11 +256,11 @@
             <h2>مهارت‌ها و ابزارها</h2>
             <ul>
                 <li>
-                    <h3>برنامه‌نویسی</h3>
-                    <ul>
+                    <h3 class="toggle" onclick="toggleSublist(this)">برنامه‌نویسی</h3>
+                    <ul class="hidden">
                         <li>
-                            <b>توسعه‌ی نرم‌افزار</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">توسعه‌ی نرم‌افزار</b>
+                            <ul class="hidden">
                                 <li>الگوریتم‌ها</li>
                                 <li>ساختمان‌های داده</li>
                                 <li>برنامه‌نویسی شی‌گرا</li>
@@ -234,38 +270,38 @@
                             </ul>
                         </li>
                         <li class='en'>
-                            <b>Python</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">Python</b>
+                            <ul class="hidden">
                                 <li>
                                     Numpy | Pandas | SciPy | SciKit-Learn
                                 </li>
                                 <li>TensorFlow | Keras</li>
-                                <li>Django | Django REST</li>
+                                <li class="inactive">Django | Django REST</li>
                             </ul>
                         </li>
                         <li class='en'>
-                            <b>Java</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">Java</b>
+                            <ul class="hidden">
                                 <li>JSE | JEE | Spring MVC</li>
                                 <li class="inactive">Deeplearning4j</li>
                             </ul>
                         </li>
                         <li class='en'>
-                            <b>&#x202D;C#</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">&#x202D;C#</b>
+                            <ul class="hidden">
                                 <li>&#x202D;.NET Framework</li>
                             </ul>
                         </li>
                         <li>
-                            <b>بستر سیستم‌عامل</b>
-                            <ul class='en'>
+                            <b class="toggle" onclick="toggleSublist(this)">بستر سیستم‌عامل</b>
+                            <ul class='en hidden'>
                                 <li>GNU/Linux (Debian, Red Hat)</li>
                                 <li>Microsoft Windows</li>
                             </ul>
                         </li>
                         <li>
-                            <b>نرم‌افزارهای سودمند</b>
-                            <ul class='en'>
+                            <b class="toggle" onclick="toggleSublist(this)">برنامه‌های سودمند</b>
+                            <ul class='en hidden'>
                                 <li>Git</li>
                                 <li class="inactive">Docker</li>
                             </ul>
@@ -273,42 +309,42 @@
                     </ul>
                 </li>
                 <li>
-                    <h3>واکاوی داده‌ها</h3>
-                    <ul>
+                    <h3 class="toggle" onclick="toggleSublist(this)">واکاوی داده‌ها</h3>
+                    <ul class="hidden">
                         <li>
-                            <b>مدیریت و انبار داده‌ها</b>
-                            <ul class='en'>
+                            <b class="toggle" onclick="toggleSublist(this)">مدیریت و انبار داده‌ها</b>
+                            <ul class='en hidden'>
                                 <li>Oracle DB | PL/SQL</li>
                                 <li>Microsoft SQL Server</li>
                             </ul>
                         </li>
                         <li>
-                            <b>دیداری‌سازی داده‌ها</b>
-                            <ul class='en'>
+                            <b class="toggle" onclick="toggleSublist(this)">دیداری‌سازی داده‌ها</b>
+                            <ul class='en hidden'>
                                 <li>Tableau</li>
                                 <li>Microsoft Power BI</li>
                             </ul>
                         </li>
                         <li>
-                            <b>صفحات گسترده</b>
-                            <ul class='en'>
+                            <b class="toggle" onclick="toggleSublist(this)">صفحات گسترده</b>
+                            <ul class='en hidden'>
                                 <li>
                                     Microsoft Excel
                                 </li>
                                 <li>
                                     Power Query
                                 </li>
-                                <li>
+                                <li class="inactive">
                                     Power Pivot
                                 </li>
-                                <li>
+                                <li class="inactive">
                                     DAX
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <b>یادگیری ماشین</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">یادگیری ماشین</b>
+                            <ul class="hidden">
                                 <li>یادگیری نظارتی</li>
                                 <li>مدل‌های کلاسیک</li>
                                 <li>شبکه‌های عصبی عمیق</li>
@@ -337,8 +373,8 @@
             <h2>زمینه‌های دل‌پسند</h2>
             <ul>
                 <li>
-                    <h3>رایانه‌ها و فن‌آوری</h3>
-                    <ul>
+                    <h3 class="toggle" onclick="toggleSublist(this)">رایانه‌ها و فن‌آوری</h3>
+                    <ul class="hidden">
                         <li>دانش‌ورزی رایانه</li>
                         <li>دانش‌ورزی داده‌ها</li>
                         <li>هوش مصنوعی</li>
@@ -347,8 +383,8 @@
                 </li>
 
                 <li>
-                    <h3>ریاضیات و دانش‌های نظری</h3>
-                    <ul>
+                    <h3 class="toggle" onclick="toggleSublist(this)">ریاضیات و دانش‌های نظری</h3>
+                    <ul class="hidden">
                         <li>آمار</li>
                         <li>فیزیک</li>
                         <li>اخترفیزیک</li>
@@ -358,8 +394,8 @@
                 </li>
 
                 <li>
-                    <h3>دانش‌های انسانی</h3>
-                    <ul>
+                    <h3 class="toggle" onclick="toggleSublist(this)">دانش‌های انسانی</h3>
+                    <ul class="hidden">
                         <li>فلسفه‌ی علم</li>
                         <li>فلسفه‌ی تحلیلی</li>
                         <li>فلسفه‌ی سیاسی</li>

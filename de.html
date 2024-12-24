@@ -15,6 +15,30 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <title>Pouyan Jaberi – Lebenslauf</title>
+
+    <noscript>
+        <style>
+            li .hidden {
+                display: block !important;
+            }
+
+            li .toggle::before {
+                content: '⮛ ';
+            }
+        </style>
+    </noscript>
+    <script>
+        function toggleSublist(element) {
+            var sublist = element.nextElementSibling;
+            if (sublist.classList.contains('hidden')) {
+                sublist.classList.remove('hidden');
+                element.classList.add('open');
+            } else {
+                sublist.classList.add('hidden');
+                element.classList.remove('open');
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -140,13 +164,15 @@
                 ein erdlinger männlicher Vernünftiger-Mensch
                 und habe bisher die Sonne
                 <script type="text/javascript">
-                    function calculateAge(date1, date2) {
-                        var diffInMs = Math.abs(date2 - date1);
-                        var years = diffInMs / (1000 * 60 * 60 * 24 * 365.25);
-                        return years.toFixed(2);
-                    }
+                    //function calculateAge(date1, date2) {
+                    //    var diffInMs = Math.abs(date2 - date1);
+                    //    var years = diffInMs / (1000 * 60 * 60 * 24 * 365.25);
+                    //    return years.toFixed(2);
+                    //}
 
-                    document.write(calculateAge(new Date('1996-06-18'), new Date()) + ' Mal')
+                    //document.write(calculateAge(new Date('1996-06-18'), new Date()) + ' Mal')
+
+                    document.write(new Date().getFullYear() - (2555 - 559) + ' Mal');
                 </script>
                 <noscript>
                     <a href="https://www.enable-javascript.com/de">mehrmals</a>
@@ -201,11 +227,11 @@
 
             <ul>
                 <li>
-                    <h3>Programmierung</h3>
-                    <ul>
+                    <h3 class="toggle" onclick="toggleSublist(this)">Programmierung</h3>
+                    <ul class="hidden">
                         <li>
-                            <b>Softwareentwicklung</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">Softwareentwicklung</b>
+                            <ul class="hidden">
                                 <li>Algorithmen</li>
                                 <li>Datenstrukturen</li>
                                 <li>Objektorientierte Programmierung</li>
@@ -215,38 +241,38 @@
                             </ul>
                         </li>
                         <li>
-                            <b>Python</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">Python</b>
+                            <ul class="hidden">
                                 <li>
                                     Numpy | Pandas | SciPy | SciKit-Learn
                                 </li>
                                 <li>TensorFlow | Keras</li>
-                                <li>Django | Django REST</li>
+                                <li class="inactive">Django | Django REST</li>
                             </ul>
                         </li>
                         <li>
-                            <b>Java</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">Java</b>
+                            <ul class="hidden">
                                 <li>JSE | JEE | Spring MVC</li>
                                 <li class="inactive">Deeplearning4j</li>
                             </ul>
                         </li>
                         <li>
-                            <b>C#</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">C#</b>
+                            <ul class="hidden">
                                 <li>.NET Rahmen</li>
                             </ul>
                         </li>
                         <li>
-                            <b>Betriebssystemplattformen</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">Betriebssystemplattformen</b>
+                            <ul class="hidden">
                                 <li>GNU/Linux (Debian, Red Hat)</li>
                                 <li>Microsoft Windows</li>
                             </ul>
                         </li>
                         <li>
-                            <b>Hilfsprogramme</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">Hilfsprogramme</b>
+                            <ul class="hidden">
                                 <li>Git</li>
                                 <li class="inactive">Docker</li>
                             </ul>
@@ -254,42 +280,42 @@
                     </ul>
                 </li>
                 <li>
-                    <h3>Datenanalyse</h3>
-                    <ul>
+                    <h3 class="toggle" onclick="toggleSublist(this)">Datenanalyse</h3>
+                    <ul class="hidden">
                         <li>
-                            <b>Datenverwaltung und -warehousing</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">Datenverwaltung und -warehousing</b>
+                            <ul class="hidden">
                                 <li>Oracle DB | PL/SQL</li>
                                 <li>Microsoft SQL Server</li>
                             </ul>
                         </li>
                         <li>
-                            <b>Datenvisualisierung</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">Datenvisualisierung</b>
+                            <ul class="hidden">
                                 <li>Tableau</li>
                                 <li>Microsoft Power BI</li>
                             </ul>
                         </li>
                         <li>
-                            <b>Tabellenkalkulationen</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">Tabellenkalkulationen</b>
+                            <ul class="hidden">
                                 <li>
                                     Microsoft Excel
                                 </li>
                                 <li>
                                     Power Query
                                 </li>
-                                <li>
+                                <li class="inactive">
                                     Power Pivot
                                 </li>
-                                <li>
+                                <li class="inactive">
                                     DAX
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <b>Maschinelles Lernen</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">Maschinelles Lernen</b>
+                            <ul class="hidden">
                                 <li>Überwachtes Lernen</li>
                                 <li>Klassische Modelle</li>
                                 <li>Tiefe neuronale Netze</li>
@@ -318,8 +344,8 @@
             <h2>Interessengebiete</h2>
             <ul>
                 <li>
-                    <h3>Computer und Technologie</h3>
-                    <ul>
+                    <h3 class="toggle" onclick="toggleSublist(this)">Computer und Technologie</h3>
+                    <ul class="hidden">
                         <li>Informatik</li>
                         <li>Datenwissenschaft</li>
                         <li>Künstliche Intelligenz</li>
@@ -328,8 +354,8 @@
                 </li>
 
                 <li>
-                    <h3>MINT-Fächer</h3>
-                    <ul>
+                    <h3 class="toggle" onclick="toggleSublist(this)">MINT-Fächer</h3>
+                    <ul class="hidden">
                         <li>Statistik</li>
                         <li>Physik</li>
                         <li>Astrophysik</li>
@@ -339,8 +365,8 @@
                 </li>
 
                 <li>
-                    <h3>Geisteswissenschaft</h3>
-                    <ul>
+                    <h3 class="toggle" onclick="toggleSublist(this)">Geisteswissenschaft</h3>
+                    <ul class="hidden">
                         <li>Wissenschaftsphilosophie</li>
                         <li>Analytische Philosophie</li>
                         <li>Politische Philosophie</li>

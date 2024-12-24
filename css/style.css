@@ -70,6 +70,33 @@ body::-webkit-scrollbar-thumb {
     font-size: 90%;
 }
 
+li .hidden {
+    display: none;
+}
+
+li .toggle {
+    cursor: pointer;
+}
+
+li .toggle::before {
+    content: '⮚ ';
+    cursor: pointer;
+}
+
+li .toggle.open::before {
+    content: '⮛ ';
+}
+
+@media print {
+    li .hidden {
+        display: block !important;
+    }
+
+    li .toggle::before {
+        content: '⮛ ';
+    }
+}
+
 /*#region main*/
 
 main {

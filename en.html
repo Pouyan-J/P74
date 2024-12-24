@@ -17,6 +17,30 @@
         <link rel="stylesheet" href="css/style.css" />
 
         <title>Pouyan Jaberi – Curriculum Vitae</title>
+        
+        <noscript>
+            <style>
+                li .hidden {
+                    display: block !important;
+                }
+
+                li .toggle::before {
+                    content: '⮛ ';
+                }
+            </style>
+        </noscript>
+        <script>
+            function toggleSublist(element) {
+                var sublist = element.nextElementSibling;
+                if (sublist.classList.contains('hidden')) {
+                    sublist.classList.remove('hidden');
+                    element.classList.add('open');
+                } else {
+                    sublist.classList.add('hidden');
+                    element.classList.remove('open');
+                }
+            }
+        </script>
     </head>
 
     <body>
@@ -276,11 +300,11 @@
                 <h2>Skills and Tools</h2>
                 <ul>
                     <li>
-                        <h3>Programming</h3>
-                        <ul>
+                        <h3 class="toggle" onclick="toggleSublist(this)">Programming</h3>
+                        <ul class="hidden">
                             <li>
-                                <b>Software Development</b>
-                                <ul>
+                                <b class="toggle" onclick="toggleSublist(this)">Software Development</b>
+                                <ul class="hidden">
                                     <li>Algorithms</li>
                                     <li>Data structures</li>
                                     <li>Object-oriented programming</li>
@@ -290,38 +314,36 @@
                                 </ul>
                             </li>
                             <li>
-                                <b>Python</b>
-                                <ul>
-                                    <li>
-                                        Numpy | Pandas | SciPy | SciKit-Learn
-                                    </li>
+                                <b class="toggle" onclick="toggleSublist(this)">Python</b>
+                                <ul class="hidden">
+                                    <li>Numpy | Pandas | SciPy | SciKit-Learn</li>
                                     <li>TensorFlow | Keras</li>
-                                    <li>Django | Django REST</li>
+                                    <li class="inactive">Django | Django REST</li>
                                 </ul>
                             </li>
                             <li>
-                                <b>Java</b>
-                                <ul>
+                                <b class="toggle" onclick="toggleSublist(this)">Java</b>
+                                <ul class="hidden">
                                     <li>JSE | JEE | Spring MVC</li>
                                     <li class="inactive">Deeplearning4j</li>
                                 </ul>
                             </li>
                             <li>
-                                <b>C#</b>
-                                <ul>
+                                <b class="toggle" onclick="toggleSublist(this)">C#</b>
+                                <ul class="hidden">
                                     <li>.NET Framework</li>
                                 </ul>
                             </li>
                             <li>
-                                <b>OS Platforms</b>
-                                <ul>
+                                <b class="toggle" onclick="toggleSublist(this)">OS Platforms</b>
+                                <ul class="hidden">
                                     <li>GNU/Linux (Debian, Red Hat)</li>
                                     <li>Microsoft Windows</li>
                                 </ul>
                             </li>
                             <li>
-                                <b>Utilities</b>
-                                <ul>
+                                <b class="toggle" onclick="toggleSublist(this)">Utilities</b>
+                                <ul class="hidden">
                                     <li>Git</li>
                                     <li class="inactive">Docker</li>
                                 </ul>
@@ -329,42 +351,34 @@
                         </ul>
                     </li>
                     <li>
-                        <h3>Data Analysis</h3>
-                        <ul>
+                        <h3 class="toggle" onclick="toggleSublist(this)">Data Analysis</h3>
+                        <ul class="hidden">
                             <li>
-                                <b>Data Administration and Warehousing</b>
-                                <ul>
+                                <b class="toggle" onclick="toggleSublist(this)">Data Administration and Warehousing</b>
+                                <ul class="hidden">
                                     <li>Oracle DB | PL/SQL</li>
                                     <li>Microsoft SQL Server</li>
                                 </ul>
                             </li>
                             <li>
-                                <b>Data Visualization</b>
-                                <ul>
+                                <b class="toggle" onclick="toggleSublist(this)">Data Visualization</b>
+                                <ul class="hidden">
                                     <li>Tableau</li>
                                     <li>Microsoft Power BI</li>
                                 </ul>
                             </li>
                             <li>
-                                <b>Spreadsheets</b>
-                                <ul>
-                                    <li>
-                                        Microsoft Excel
-                                    </li>
-                                    <li>
-                                        Power Query
-                                    </li>
-                                    <li>
-                                        Power Pivot
-                                    </li>
-                                    <li>
-                                        DAX
-                                    </li>
+                                <b class="toggle" onclick="toggleSublist(this)">Spreadsheets</b>
+                                <ul class="hidden">
+                                    <li>Microsoft Excel</li>
+                                    <li>Power Query</li>
+                                    <li class="inactive">Power Pivot</li>
+                                    <li class="inactive">DAX</li>
                                 </ul>
                             </li>
                             <li>
-                                <b>Machine Learning</b>
-                                <ul>
+                                <b class="toggle" onclick="toggleSublist(this)">Machine Learning</b>
+                                <ul class="hidden">
                                     <li>Supervised learning</li>
                                     <li>Classic models</li>
                                     <li>Deep neural networks</li>
@@ -393,8 +407,8 @@
                 <h2>Fields of Interest</h2>
                 <ul>
                     <li>
-                        <h3>Computers & Technology</h3>
-                        <ul>
+                        <h3 class="toggle" onclick="toggleSublist(this)">Computers & Technology</h3>
+                        <ul class="hidden">
                             <li>Computer Science</li>
                             <li>Data Science</li>
                             <li>Artificial Intelligence</li>
@@ -403,8 +417,8 @@
                     </li>
 
                     <li>
-                        <h3>STEM</h3>
-                        <ul>
+                        <h3 class="toggle" onclick="toggleSublist(this)">STEM</h3>
+                        <ul class="hidden">
                             <li>Statistics</li>
                             <li>Physics</li>
                             <li>Astrophysics</li>
@@ -414,8 +428,8 @@
                     </li>
 
                     <li>
-                        <h3>Humanities</h3>
-                        <ul>
+                        <h3 class="toggle" onclick="toggleSublist(this)">Humanities</h3>
+                        <ul class="hidden">
                             <li>Philosophy of Science</li>
                             <li>Analytic Philosophy</li>
                             <li>Political Philosophy</li>

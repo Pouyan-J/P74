@@ -18,6 +18,30 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <title>Пуян Джабери – Ход Жизни</title>
+
+    <noscript>
+        <style>
+            li .hidden {
+                display: block !important;
+            }
+
+            li .toggle::before {
+                content: '⮛ ';
+            }
+        </style>
+    </noscript>
+    <script>
+        function toggleSublist(element) {
+            var sublist = element.nextElementSibling;
+            if (sublist.classList.contains('hidden')) {
+                sublist.classList.remove('hidden');
+                element.classList.add('open');
+            } else {
+                sublist.classList.add('hidden');
+                element.classList.remove('open');
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -203,11 +227,11 @@
 
             <ul>
                 <li>
-                    <h3>Программирование</h3>
-                    <ul>
+                    <h3 class="toggle" onclick="toggleSublist(this)">Программирование</h3>
+                    <ul class="hidden">
                         <li>
-                            <b>Разработка Программного Обеспечения</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">Разработка Программного Обеспечения</b>
+                            <ul class="hidden">
                                 <li>Алгоритмы</li>
                                 <li>Структуры данных</li>
                                 <li>Объектно-ориентированное программирование</li>
@@ -217,38 +241,38 @@
                             </ul>
                         </li>
                         <li>
-                            <b>Python</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">Python</b>
+                            <ul class="hidden">
                                 <li>
                                     Numpy | Pandas | SciPy | SciKit-Learn
                                 </li>
                                 <li>TensorFlow | Keras</li>
-                                <li>Django | Django REST</li>
+                                <li class="inactive">Django | Django REST</li>
                             </ul>
                         </li>
                         <li>
-                            <b>Java</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">Java</b>
+                            <ul class="hidden">
                                 <li>JSE | JEE | Spring MVC</li>
                                 <li class="inactive">Deeplearning4j</li>
                             </ul>
                         </li>
                         <li>
-                            <b>C#</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">C#</b>
+                            <ul class="hidden">
                                 <li>.NET Фреймворк</li>
                             </ul>
                         </li>
                         <li>
-                            <b>Платформы ОС</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">Платформы ОС</b>
+                            <ul class="hidden">
                                 <li>GNU/Linux (Debian, Red Hat)</li>
                                 <li>Microsoft Windows</li>
                             </ul>
                         </li>
                         <li>
-                            <b>Утилиты</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">Утилиты</b>
+                            <ul class="hidden">
                                 <li>Git</li>
                                 <li class="inactive">Docker</li>
                             </ul>
@@ -256,42 +280,42 @@
                     </ul>
                 </li>
                 <li>
-                    <h3>Анализ Данных</h3>
-                    <ul>
+                    <h3 class="toggle" onclick="toggleSublist(this)">Анализ Данных</h3>
+                    <ul class="hidden">
                         <li>
-                            <b>Администрирование и хранилище данных</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">Администрирование и хранилище данных</b>
+                            <ul class="hidden">
                                 <li>Oracle DB | PL/SQL</li>
                                 <li>Microsoft SQL Server</li>
                             </ul>
                         </li>
                         <li>
-                            <b>Визуализация Данных</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">Визуализация Данных</b>
+                            <ul class="hidden">
                                 <li>Tableau</li>
                                 <li>Microsoft Power BI</li>
                             </ul>
                         </li>
                         <li>
-                            <b>Электронные таблицы</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">Электронные таблицы</b>
+                            <ul class="hidden">
                                 <li>
                                     Microsoft Excel
                                 </li>
                                 <li>
                                     Power Query
                                 </li>
-                                <li>
+                                <li class="inactive">
                                     Power Pivot
                                 </li>
-                                <li>
+                                <li class="inactive">
                                     DAX
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <b>Машинное Обучение</b>
-                            <ul>
+                            <b class="toggle" onclick="toggleSublist(this)">Машинное Обучение</b>
+                            <ul class="hidden">
                                 <li>Обучение с учителем</li>
                                 <li>Классические модели</li>
                                 <li>Глубокие нейронные сети</li>
@@ -320,8 +344,8 @@
             <h2>Сферами Интересов</h2>
             <ul>
                 <li>
-                    <h3>Компьютеры и Технологии</h3>
-                    <ul>
+                    <h3 class="toggle" onclick="toggleSublist(this)">Компьютеры и Технологии</h3>
+                    <ul class="hidden">
                         <li>Информатика</li>
                         <li>Наука о Данных</li>
                         <li>Искусственный Интеллект</li>
@@ -330,8 +354,8 @@
                 </li>
 
                 <li>
-                    <h3>НТИМ</h3>
-                    <ul>
+                    <h3 class="toggle" onclick="toggleSublist(this)">НТИМ</h3>
+                    <ul class="hidden">
                         <li>Статистика</li>
                         <li>Физика</li>
                         <li>Астрофизика</li>
@@ -341,8 +365,8 @@
                 </li>
 
                 <li>
-                    <h3>Гуманитарные Науки</h3>
-                    <ul>
+                    <h3 class="toggle" onclick="toggleSublist(this)">Гуманитарные Науки</h3>
+                    <ul class="hidden">
                         <li>Философия Науки</li>
                         <li>Аналитическая Философия</li>
                         <li>Политическая Философия</li>
