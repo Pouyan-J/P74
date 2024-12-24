@@ -79,12 +79,12 @@ li .toggle {
 }
 
 li .toggle::before {
-    content: '⮚ ';
+    content: '▹ ';
     cursor: pointer;
 }
 
 li .toggle.open::before {
-    content: '⮛ ';
+    content: '▿ ';
 }
 
 @media print {
@@ -93,7 +93,7 @@ li .toggle.open::before {
     }
 
     li .toggle::before {
-        content: '⮛ ';
+        content: '▿ ';
     }
 }
 
