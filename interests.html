@@ -16,6 +16,18 @@
     <title>Interests and Preferences</title>
 
     <script type="text/javascript" src="scripts/LunarPhases.js" defer></script>
+    <script type="text/javascript" src="scripts/ToggleList.js" defer></script>
+    <noscript>
+        <style>
+            li .hidden {
+                display: block !important;
+            }
+
+            li .toggle::before {
+                content: '▿ ';
+            }
+        </style>
+    </noscript>
 
     <style>
         @media only screen and (min-width: 600px) {
@@ -203,29 +215,55 @@
                 Some other books that I'd strongly recommend:
             </p>
 
-            <ul class="styled-list">
-                <li>The Gods Themselves <div class="author">(Isaac Asimov)</div></li>
-                <li>The Pattern on the Stone <div class="author">(Danny Hillis)</div></li>
-                <li>Blown to Bits: Your Life, Liberty, and Happiness After the Digital Explosion <div class="author">(Hal Abelson, Ken Ledeen, Harry Lewis)</div></li>
-                <li>Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy <div class="author">(Cathy O'Neil)</div></li>
-                <li>AI Superpowers: China, Silicon Valley, and the New World Order <div class="author">(Kai-Fu Lee)</div></li>
-                <li>AI 2041: Ten Visions for Our Future <div class="author">(Chen Qiufan, Kai-Fu Lee)</div></li>
-                <li>Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are <div class="author">(Seth Stephens-Davidowitz)</div></li>
-                <li>Calling Bullshit: The Art of Skepticism in a Data-Driven World <div class="author">(Carl T. Bergstrom, Jevin D. West)</div></li>
-                <li>Your Deceptive Mind: A Scientific Guide to Critical Thinking Skills <div class="author">(Steven Novella)</div></li>
-                <li>The Death of Expertise: The Campaign Against Established Knowledge and Why it Matters <div class="author">(Tom Nichols)</div></li>
-                <li>Predictably Irrational <div class="author">(Dan Ariely)</div></li>
-                <li>Factfulness: Ten Reasons We're Wrong About the World – and Why Things Are Better Than You Think <div class="author">(Hans Rosling, Anna Rosling Rönnlund, Ola Rosling)</div></li>
-                <li>How an Economy Grows and Why It Crashes <div class="author">(Peter Schiff)</div></li>
-                <li>Guns, Germs, and Steel <div class="author">(Jared Diamond)</div></li>
-                <li>Upheaval: How Nations Cope with Crisis and Change <div class="author">(Jared Diamond)</div></li>
-                <li>Prisoners of Geography: Ten Maps That Tell You Everything You Need to Know About Global Politics <div class="author">(Tim Marshall)</div></li>
-                <li>The Power of Geography: Ten Maps that Reveal the Future of Our World <div class="author">(Tim Marshall)</div></li>
-                <li>Sapiens: A Brief History of Humankind <div class="author">(Yuval Noah Harari)</div></li>
-                <li>Homo Deus: A Brief History of Tomorrow <div class="author">(Yuval Noah Harari)</div></li>
-                <li>Rubaĭat <div class="author">(Omar Khayyám)</div></li>
-                <li>Shahnameh <div class="author">(Abul-Qâsem Ferdowsi)</div></li>                
+            <ul>
+                <li>
+                    <h4 class="toggle" onclick="toggleSublist(this)">Novel</h4>
+                    <ul class="hidden styled-list">
+                        <li>The Gods Themselves <div class="author">(Isaac Asimov)</div></li>
+                    </ul>
+                </li>
+                <li>
+                    <h4 class="toggle" onclick="toggleSublist(this)">Technology and data</h4>
+                    <ul class="hidden styled-list">
+                        <li>The Pattern on the Stone <div class="author">(Danny Hillis)</div></li>
+                        <li>Blown to Bits: Your Life, Liberty, and Happiness After the Digital Explosion <div class="author">(Hal Abelson, Ken Ledeen, Harry Lewis)</div></li>
+                        <li>Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy <div class="author">(Cathy O'Neil)</div></li>
+                        <li>AI Superpowers: China, Silicon Valley, and the New World Order <div class="author">(Kai-Fu Lee)</div></li>
+                        <li>AI 2041: Ten Visions for Our Future <div class="author">(Chen Qiufan, Kai-Fu Lee)</div></li>
+                    </ul>
+                </li>
+                <li>
+                    <h4 class="toggle" onclick="toggleSublist(this)">Critical thinking and rationality</h4>
+                    <ul class="hidden styled-list">
+                        <li>Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are <div class="author">(Seth Stephens-Davidowitz)</div></li>
+                        <li>Calling Bullshit: The Art of Skepticism in a Data-Driven World <div class="author">(Carl T. Bergstrom, Jevin D. West)</div></li>
+                        <li>Your Deceptive Mind: A Scientific Guide to Critical Thinking Skills <div class="author">(Steven Novella)</div></li>
+                        <li>The Death of Expertise: The Campaign Against Established Knowledge and Why it Matters <div class="author">(Tom Nichols)</div></li>
+                        <li>Predictably Irrational <div class="author">(Dan Ariely)</div></li>
+                        <li>Factfulness: Ten Reasons We're Wrong About the World – and Why Things Are Better Than You Think <div class="author">(Hans Rosling, Anna Rosling Rönnlund, Ola Rosling)</div></li>
+                    </ul>
+                </li>
+                <li>
+                    <h4 class="toggle" onclick="toggleSublist(this)">Economics, society, and history</h4>
+                    <ul class="hidden styled-list">
+                        <li>How an Economy Grows and Why It Crashes <div class="author">(Peter Schiff)</div></li>
+                        <li>Guns, Germs, and Steel <div class="author">(Jared Diamond)</div></li>
+                        <li>Upheaval: How Nations Cope with Crisis and Change <div class="author">(Jared Diamond)</div></li>
+                        <li>Prisoners of Geography: Ten Maps That Tell You Everything You Need to Know About Global Politics <div class="author">(Tim Marshall)</div></li>
+                        <li>The Power of Geography: Ten Maps that Reveal the Future of Our World <div class="author">(Tim Marshall)</div></li>
+                        <li>Sapiens: A Brief History of Humankind <div class="author">(Yuval Noah Harari)</div></li>
+                        <li>Homo Deus: A Brief History of Tomorrow <div class="author">(Yuval Noah Harari)</div></li>
+                    </ul>
+                </li>
+                <li>
+                    <h4 class="toggle" onclick="toggleSublist(this)">Classic literature</h4>
+                    <ul class="hidden styled-list">
+                        <li>Rubaĭat <div class="author">(Omar Khayyám)</div></li>
+                        <li>Shahnameh <div class="author">(Abul-Qâsem Ferdowsi)</div></li>
+                    </ul>
+                </li>
             </ul>
+
 
             <div class="center">
                 <img src="img/poster/21.jpg" alt="21 Lessons for the 21st Century" class="medium-img" />
@@ -307,10 +345,19 @@
                 Isn't Fallout 4 a great game?
             </p>
 
+            <h4 id="detroit">Detroit: Become Human</h4>
+            <p>
+                This game is a perfect example of an interactive story. It takes place in a near future
+                where humans have developed complex androids to use—or sometimes to abuse—them.
+                <span class="spoiler">However, some androids develop deviant behaviors from their
+                    intended programming and become disobedient, seeking freedom.</span> The plot is
+                thought-provoking, raising questions about the nature of humanity.
+            </p>
+
             <h4 id="beyond">Beyond: Two Souls</h4>
             <p>
-                This game is more like a playable movie, and a fabulous one! I typically do not enjoy supernatural
-                plots, but this one made me mesmerised until its ending (and even a while after that).
+                This is a piece of art! I typically do not enjoy supernatural plots, but this one made me
+                mesmerized until its ending (and even a while after that).
             </p>
 
             <h4 id="games-other">Other</h4>
@@ -318,36 +365,89 @@
                 Some of my other favorite game titles:
             </p>
 
-            <ul class="styled-list">
-                <li>Ace Combat: Assault Horizon</li>
-                <li>Call of Duty: Modern Warfare 1, 2, 3</li>
-                <li>Battlefield 4</li>
-                <li>War Thunder</li>
-                <li>Arma 3</li>
-                <li>SWAT 4</li>
-
-                <li>Ghost Recon: Wildlands</li>
-                <li>Splinter Cell: Blacklist</li>
-                <li>Assassin's Creed: Brotherhood</li>
-
-                <li>Grand Theft Auto V</li>
-                <li>Just Cause 3</li>
-                <li>Saints Row: The Third</li>
-                <li>Need for Speed: Hot Pursuit</li>
-                <li>Kerbal Space Program</li>
-                <li>Spaceflight Simulator</li>
-                <li>Universe Sandbox</li>
-
-                <li>Portal 2</li>
-                <li>Portal Reloaded</li>
-                <li>Stray</li>
-
-                <li>Life is Strange 2</li>
+            <ul>
+                <li>
+                    <h4 class="toggle" onclick="toggleSublist(this)">Combat</h4>
+                    <ul class="hidden">
+                        <li>
+                            <b class="toggle" onclick="toggleSublist(this)">Shooter</b>
+                            <ul class="hidden styled-list">
+                                <li>Ghost Recon: Wildlands</li>
+                                <li>Ghost Recon: Future Soldier</li>
+                                <li>Splinter Cell: Conviction</li>
+                                <li>Splinter Cell: Blacklist</li>
+                                <li>Call of Duty: Modern Warfare 1, 2, 3</li>
+                                <li>Call of Duty: Black Ops</li>
+                                <li>Battlefield 4</li>
+                                <li>Arma 3</li>
+                                <li>SWAT 4</li>
+                                <li>Ready or Not</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b class="toggle" onclick="toggleSublist(this)">Action-Adventure</b>
+                            <ul class="hidden styled-list">
+                                <li>Grand Theft Auto Ⅴ</li>
+                                <li>Watch_Dogs (1, 2)</li>
+                                <li>Just Cause 3</li>
+                                <li>Saints Row: The Third</li>
+                                <li>Assassin's Creed: Ezio Trilogy</li>
+                                <li>Assassin's Creed Ⅲ</li>
+                                <li>Assassin's Creed Ⅳ: Black Flag, Rogue</li>
+                                <li>Tomb Raider: Legend, Underworld</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b class="toggle" onclick="toggleSublist(this)">Vehicular combat</b>
+                            <ul class="hidden styled-list">
+                                <li>Ace Combat: Assault Horizon</li>
+                                <li>War Thunder</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4 class="toggle" onclick="toggleSublist(this)">Racing</h4>
+                    <ul class="hidden styled-list">
+                        <li>Need for Speed: Most Wanted</li>
+                        <li>Need for Speed: Hot Pursuit</li>
+                        <li>Need for Speed: Run</li>
+                        <li>Forza Horizon 5</li>
+                    </ul>
+                </li>
+                <li>
+                    <h4 class="toggle" onclick="toggleSublist(this)">Space</h4>
+                    <ul class="hidden styled-list">
+                        <li>Kerbal Space Program</li>
+                        <li>Spaceflight Simulator</li>
+                        <li>Universe Sandbox</li>
+                        <li>Flight Of Nova</li>
+                        <li>Starfield</li>
+                    </ul>
+                </li>
+                <li>
+                    <h4 class="toggle" onclick="toggleSublist(this)">Puzzle</h4>
+                    <ul class="hidden styled-list">
+                        <li>Portal (1, 2)</li>
+                        <li>Portal Reloaded</li>
+                        <li>The Turing Test</li>
+                    </ul>
+                </li>
+                <li>
+                    <h4 class="toggle" onclick="toggleSublist(this)">Interactive story</h4>
+                    <ul class="hidden styled-list">
+                        <li>Stray</li>
+                        <li>Life is Strange (1, 2)</li>
+                        <li>It Takes Two</li>
+                    </ul>
+                </li>
             </ul>
 
             <div class="center">
-                <img src="https://upload.wikimedia.org/wikipedia/en/7/70/Fallout_4_cover_art.jpg" alt="Fallout 4"
-                    class="medium-img" />
+                <img src="https://upload.wikimedia.org/wikipedia/en/7/70/Fallout_4_cover_art.jpg"
+                    alt="Fallout 4" class="medium-img" />
+                <img src="https://upload.wikimedia.org/wikipedia/en/e/ee/Detroit_Become_Human.jpg"
+                    alt="Detroit: Become Human" class="medium-img" />
                 <img src="https://upload.wikimedia.org/wikipedia/en/d/da/Beyond_Two_Souls_final_cover.jpg"
                     alt="Beyond: Two Souls" class="medium-img" />
             </div>
@@ -408,7 +508,7 @@
                 of magnification or filtration to be observed clearly from the Earth. But the Moon, the sole natural
                 satellite of our home planet, can be seen by the naked eye every day. Moreover, we've been there! Think
                 about it: there are actual man-made probes, scientific equipment, and footprints on the lunar surface.
-                How mind-blowing is that?!
+                How mind-blowing is that?! <span id="moon-emoji"></span>
             </p>
 
             <blockquote id="moon-quote">
@@ -758,6 +858,41 @@ Ncol ≈ (B0, 5%, 94%)</textarea>
         <hr class="lite" />
 
         <article>
+            <h3 id="mllib">Machine Learning Libraries</h3>
+            <p>
+                Libraries and frameworks occasionally come and go; one
+                cannot stick to any of them forever. At the moment, I would
+                rather work with the following:
+            </p>
+
+            <h4 id="tf">Tensorflow</h4>
+            <p>
+                I enjoy using TensorFlow for deep learning purposes. It’s
+                well-documented and I find the codes more readable. In
+                addition, it gets even more fun when Keras is used as a
+                wrapper on top of it.
+            </p>
+
+            <h4 id="np">NumPy</h4>
+            <p>
+                Another library that appears charming to me is NumPy. It is
+                so well-designed and I love to use it as a replacement for
+                MATLAB when it comes to linear algebra.
+            </p>
+
+            <div class="center">
+                <a href="https://tensorflow.org" target="_blank">
+                    <img src="img/logo/tf.svg" alt="VSCode logo" class="small-img" />
+                </a>
+                <a href="https://numpy.org" target="_blank">
+                    <img src="img/logo/np.svg" alt="NumPy Logo" class="small-img" />
+                </a>
+            </div>
+        </article>
+
+        <hr class="lite" />
+
+        <article>
             <h3 id="tools">Developer Tools</h3>
 
             <h4 id="vscode">Visual Studio Code (code editor)</h4>
@@ -792,6 +927,26 @@ Ncol ≈ (B0, 5%, 94%)</textarea>
                 life a lot easier!
             </p>
 
+            <h4 id="notesnook">Notesnook (note-taking)</h4>
+            <p>
+                I have tried numerous note-taking apps so far. Some lacked
+                code-highlighting or mathematical formulas. Others were too
+                sophisticated, leading to more distraction than benefit.
+                Some imprisoned most of their useful features—especially
+                cross-platform syncing—behind titanic gigantic paywalls.
+                And many of such apps, despite offering complex features like
+                integrated AI agents, web capturing capabilities, built-in
+                calendars, and other fancy stuff, embracingly fail to support
+                one minor feature that renders them almost useless to around
+                one billion people worldwide: support for right-to-left
+                (RTL) scripts!
+                <br />
+                Finally, I found Notesnook. It's a simple, open-source app,
+                available on all major desktop and mobile platforms (as well
+                as in web browser) with all necessary features being free, and
+                of course offering RTL SUPPORT FOR TYRANNOSAURI REGES’ SAKE!
+            </p>
+
             <h4 id="tools-other">Other</h4>
             <p class="no-margin">
                 A few other tools that I use for my daily work and enjoy
@@ -814,40 +969,8 @@ Ncol ≈ (B0, 5%, 94%)</textarea>
                 <a href="https://docker.com" target="_blank">
                     <img src="img/logo/docker.svg" alt="Docker logo" class="small-img" />
                 </a>
-            </div>
-        </article>
-
-        <hr class="lite" />
-
-        <article>
-            <h3 id="mllib">Machine Learning Libraries</h3>
-            <p>
-                Libraries and frameworks occasionally come and go; one
-                cannot stick to any of them forever. At the moment, I would
-                rather work with the following:
-            </p>
-
-            <h4 id="tf">Tensorflow</h4>
-            <p>
-                I enjoy using TensorFlow for deep learning purposes. It’s
-                well-documented and I find the codes more readable. In
-                addition, it gets even more fun when Keras is used as a
-                wrapper on top of it.
-            </p>
-
-            <h4 id="np">NumPy</h4>
-            <p>
-                Another library that appears charming to me is NumPy. It is
-                so well-designed and I love to use it as a replacement for
-                MATLAB when it comes to linear algebra.
-            </p>
-
-            <div class="center">
-                <a href="https://tensorflow.org" target="_blank">
-                    <img src="img/logo/tf.svg" alt="VSCode logo" class="small-img" />
-                </a>
-                <a href="https://numpy.org" target="_blank">
-                    <img src="img/logo/np.svg" alt="NumPy Logo" class="small-img" />
+                <a href="https://notesnook.com" target="_blank">
+                    <img src="img/logo/notesnook.svg" alt="Notesnook logo" class="small-img" />
                 </a>
             </div>
         </article>
