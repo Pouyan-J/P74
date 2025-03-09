@@ -18,29 +18,18 @@
 
         <title>Pouyan Jaberi – Curriculum Vitae</title>
         
+        <script type="text/javascript" src="scripts/ToggleList.js" defer></script>
         <noscript>
             <style>
                 li .hidden {
                     display: block !important;
                 }
-
+    
                 li .toggle::before {
                     content: '▿ ';
                 }
             </style>
         </noscript>
-        <script>
-            function toggleSublist(element) {
-                var sublist = element.nextElementSibling;
-                if (sublist.classList.contains('hidden')) {
-                    sublist.classList.remove('hidden');
-                    element.classList.add('open');
-                } else {
-                    sublist.classList.add('hidden');
-                    element.classList.remove('open');
-                }
-            }
-        </script>
     </head>
 
     <body>
