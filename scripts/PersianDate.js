@@ -1,6 +1,6 @@
 "use strict";
 
-const date_seperator = ".";
+const date_seperator = "-";
 
 function to_persian_date_array(date) {
     let options = {
