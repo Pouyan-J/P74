@@ -1,5 +1,6 @@
 "use strict";
 
+// ── Assets ──────────────────────────────────────────────
 const moonImages = [
     "https://raw.githubusercontent.com/tallulahh/moon-phase/main/newmoon.png",
     "https://raw.githubusercontent.com/tallulahh/moon-phase/main/waxingcrescent.png",
@@ -11,35 +12,60 @@ const moonImages = [
     "https://raw.githubusercontent.com/tallulahh/moon-phase/main/waningcrescent.png",
 ];
 
-const moonEmojies = ["🌑", "🌒", "🌓", "🌔", "🌕", "🌖", "🌗", "🌘"];
+const moonEmojis = ["🌑", "🌒", "🌓", "🌔", "🌕", "🌖", "🌗", "🌘"];
 
-const arabicToEnglish = s => s.replace(/[٠-٩]/g, d => '٠١٢٣٤٥٦٧٨٩'.indexOf(d));
-let lunarDay = parseInt(arabicToEnglish(new Date().toLocaleDateString("ar-SA").split("/")[0]));
-let lunarPhase = 0;
-
-if (lunarDay == 1 || lunarDay >= 29)
-    lunarPhase = 0;
-else if (lunarDay >= 2 && lunarDay <= 13)
-    lunarPhase = Math.ceil((lunarDay - 1) / 4);
-else if (lunarDay == 14 || lunarDay == 15)
-    lunarPhase = 4;
-else if (lunarDay >= 16 && lunarDay <= 27)
-    lunarPhase = Math.ceil((lunarDay - 15) / 4) + 4;
-else
-    lunarPhase = 7;
-
-document.getElementById("moon-phases").src = moonImages[lunarPhase];
-document.getElementById("moon-emoji").textContent = moonEmojies[lunarPhase];
-
-if (new Date().getMonth() + 1 == 5 && new Date().getDate() == 4) {
-    document.getElementById("moon-phases").src = 'img/poster/no-moon.png';
-    document.getElementById("moon-emoji").textContent = "⚫";
-    document.getElementById("moon-quote").innerHTML = "“That's no moon…”" + "<br />" + "— Obi-Wan Kenobi";
+// ── Astronomical moon phase ─────────────────────────────
+function getMoonPhase(date) {
+    function toJulianDay(d) {
+        const year = d.getFullYear();
+        const month = d.getMonth() + 1;
+        const day = d.getDate() + d.getHours() / 24 + d.getMinutes() / 1440 + d.getSeconds() / 86400;
+        const a = Math.floor((14 - month) / 12);
+        const y = year + 4800 - a;
+        const m = month + 12 * a - 3;
+        return day + Math.floor((153 * m + 2) / 5) + 365 * y + Math.floor(y / 4) - Math.floor(y / 100) + Math.floor(y / 400) - 32045;
+    }
+    const knownNewMoonJD = 2451550.26;
+    const synodicMonth = 29.53058867;
+    const jd = toJulianDay(date);
+    const daysSince = jd - knownNewMoonJD;
+    const phaseFraction = ((daysSince % synodicMonth) + synodicMonth) % synodicMonth / synodicMonth;
+    return { index: Math.round(phaseFraction * 8) % 8, fraction: phaseFraction };
 }
 
-else if (new Date().getMonth() + 1 == 7 && new Date().getDate() == 20) {
-    document.getElementById("moon-phases").src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Apollo_11_Lunar_Module_Eagle_in_landing_configuration_in_lunar_orbit_from_the_Command_and_Service_Module_Columbia.jpg/534px-Apollo_11_Lunar_Module_Eagle_in_landing_configuration_in_lunar_orbit_from_the_Command_and_Service_Module_Columbia.jpg';
-    document.getElementById("moon-emoji").textContent = "🦅";
-    document.getElementById("moon-quote").innerHTML = "“Tranquility Base here. The Eagle has landed.”"
-        + "<br />" + "— Neil A. Armstrong (Apollo 11)";
+// ── Special days ──────────────────────────────────────────
+function handleSpecialDates(date) {
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+
+    if (month === 5 && day === 4) {  // May the 4th
+        document.getElementById("moon-phases").src = 'img/poster/no-moon.png';
+        document.getElementById("moon-emoji").textContent = "⚫";
+        document.getElementById("moon-quote").innerHTML = "“That's no moon…”<br /> — Obi-Wan Kenobi";
+        return true;
+    }
+    if (month === 7 && day === 20) { // Apollo 11 landing
+        document.getElementById("moon-phases").src =
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Apollo_11_Lunar_Module_Eagle_in_landing_configuration_in_lunar_orbit_from_the_Command_and_Service_Module_Columbia.jpg/960px-Apollo_11_Lunar_Module_Eagle_in_landing_configuration_in_lunar_orbit_from_the_Command_and_Service_Module_Columbia.jpg';
+        document.getElementById("moon-emoji").textContent = "🦅";
+        document.getElementById("moon-quote").innerHTML =
+            "“Tranquility Base here. The Eagle has landed.”<br /> — Neil A. Armstrong (Apollo 11)";
+        return true;
+    }
+    return false;
 }
+
+// ── Main update ──────────────────────────────────────────
+function updateMoonPhase() {
+    const now = new Date();
+
+    if (!handleSpecialDates(now)) {
+        const { index } = getMoonPhase(now);
+        document.getElementById("moon-phases").src = moonImages[index];
+        document.getElementById("moon-emoji").textContent = moonEmojis[index];
+        document.getElementById("moon-quote").innerHTML = "“Don't tell me the sky's the limit when there are footprints on the moon.<br /> — Paul Brandt”";
+    }
+}
+
+// Run on page load
+updateMoonPhase();
