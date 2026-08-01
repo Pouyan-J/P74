@@ -1,6 +1,5 @@
 "use strict";
 
-// ── Assets ──────────────────────────────────────────────
 const moonImages = [
     "https://raw.githubusercontent.com/tallulahh/moon-phase/main/newmoon.png",
     "https://raw.githubusercontent.com/tallulahh/moon-phase/main/waxingcrescent.png",
@@ -14,7 +13,6 @@ const moonImages = [
 
 const moonEmojis = ["🌑", "🌒", "🌓", "🌔", "🌕", "🌖", "🌗", "🌘"];
 
-// ── Astronomical moon phase ─────────────────────────────
 function getMoonPhase(date) {
     function toJulianDay(d) {
         const year = d.getFullYear();
@@ -33,12 +31,11 @@ function getMoonPhase(date) {
     return { index: Math.round(phaseFraction * 8) % 8, fraction: phaseFraction };
 }
 
-// ── Special days ──────────────────────────────────────────
 function handleSpecialDates(date) {
     const month = date.getMonth() + 1;
     const day = date.getDate();
 
-    if (month === 5 && day === 4) {  // May the 4th
+    if (month === 5 && day === 4) {  // Star Wars day
         document.getElementById("moon-phases").src = 'img/poster/no-moon.png';
         document.getElementById("moon-emoji").textContent = "⚫";
         document.getElementById("moon-quote").innerHTML = "“That's no moon…”<br /> — Obi-Wan Kenobi";
@@ -46,7 +43,7 @@ function handleSpecialDates(date) {
     }
     if (month === 7 && day === 20) { // Apollo 11 landing
         document.getElementById("moon-phases").src =
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Apollo_11_Lunar_Module_Eagle_in_landing_configuration_in_lunar_orbit_from_the_Command_and_Service_Module_Columbia.jpg/960px-Apollo_11_Lunar_Module_Eagle_in_landing_configuration_in_lunar_orbit_from_the_Command_and_Service_Module_Columbia.jpg';
+            'img/poster/apollo11.png';
         document.getElementById("moon-emoji").textContent = "🦅";
         document.getElementById("moon-quote").innerHTML =
             "“Tranquility Base here. The Eagle has landed.”<br /> — Neil A. Armstrong (Apollo 11)";
@@ -55,7 +52,6 @@ function handleSpecialDates(date) {
     return false;
 }
 
-// ── Main update ──────────────────────────────────────────
 function updateMoonPhase() {
     const now = new Date();
 
@@ -63,7 +59,7 @@ function updateMoonPhase() {
         const { index } = getMoonPhase(now);
         document.getElementById("moon-phases").src = moonImages[index];
         document.getElementById("moon-emoji").textContent = moonEmojis[index];
-        document.getElementById("moon-quote").innerHTML = "“Don't tell me the sky's the limit when there are footprints on the moon.<br /> — Paul Brandt”";
+        document.getElementById("moon-quote").innerHTML = "“Don't tell me the sky's the limit when there are footprints on the moon.”<br /> — Paul Brandt";
     }
 }
 
