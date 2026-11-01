@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="icon" href="icon.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/shabnam-font@v5.0.1/dist/font-face.css" />
     <link rel="stylesheet" href="css/style.css" />
 
     <title>Public Key</title>
@@ -16,7 +21,13 @@
             var copyText = document.getElementById("pk_area");
             copyText.select();
             copyText.setSelectionRange(0, 99999);
-            document.execCommand("copy");
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(copyText.value).catch(function () {
+                    document.execCommand("copy");
+                });
+            } else {
+                document.execCommand("copy");
+            }
             alert(
                 `The public key has been copied.
 Der öffentliche Schlüssel wurde kopiert.
