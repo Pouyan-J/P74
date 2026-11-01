@@ -109,8 +109,7 @@ main {
     --fontSize_s: 1.5rem;
     --fontSize_m: 1rem;
     opacity: 0.9;
-    background-color: var(--color_background);
-    z-index: -1;
+    background-color: var(--color_background);
 
     overflow-x: hidden;
 }
@@ -147,16 +146,16 @@ main h4 {
 }
 
 main p,
-a,
-ul,
-td,
-th,
-blockquote {
+main a,
+main ul,
+main td,
+main th,
+main blockquote {
     font-size: var(--fontSize_n);
 }
 
 main sup,
-sub {
+main sub {
     font-size: var(--fontSize_m)
 }
 
@@ -179,9 +178,13 @@ main blockquote {
     margin: 1rem 5rem;
 }
 
+main table {
+    border-collapse: collapse;
+}
+
 main td,
-th {
-    border: solid var(--color_tertiary);
+main th {
+    border: 1px solid var(--color_tertiary);
     padding: 0.5% 1%;
     text-align: left;
 }
@@ -210,6 +213,8 @@ main a:active {
 }
 
 main hr {
+    height: 2px;
+    border: 0;
     background-color: var(--color_tertiary);
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -222,7 +227,6 @@ main hr.title {
 
 main hr.lite {
     background-color: var(--color_secondary);
-    border: 1px solid var(--color_secondary);
 }
 
 main .subtitle {
@@ -337,8 +341,7 @@ h1.main-title {
     font-size: 4rem;
 }
 
-.boxed {
-    z-index: -1;
+.boxed {
     padding: 3% 3%;
     border-radius: 1vw;
     background: var(--color_background);
@@ -428,9 +431,9 @@ h1.main-title {
     display: flex;
     align-items: center;
     height: 5rem;
-    color: var(--text-primary);
+    color: var(--color_foreground);
     text-decoration: none;
-    transition: var(--transition-speed);
+    transition: var(--transition_speed);
     /*filter: grayscale(100%) opacity(0.7);*/
 }
 
@@ -466,11 +469,10 @@ h1.main-title {
 
 .fa-primary,
 .fa-secondary {
-    transition: var(--transition-speed);
+    transition: var(--transition_speed);
 }
 
 .nav-link:hover .fa-primary {
-    background: var(--color_tertiary);
     color: var(--color_foreground);
     transition: var(--transition_speed);
 }
@@ -509,7 +511,7 @@ h1.main-title {
     display: flex;
     align-items: center;
     height: 5rem;
-    color: var(--text-primary);
+    color: var(--color_foreground);
     text-decoration: none;
 }
 
@@ -552,7 +554,7 @@ h1.main-title {
     }
 
     main td,
-    th {
+    main th {
         font-size: var(--fontSize_s);
     }
 
@@ -615,7 +617,7 @@ h1.main-title {
 
 /*#region large-screens*/
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 601px) {
     .navbar {
         top: 0;
         width: 5rem;
@@ -635,7 +637,7 @@ h1.main-title {
     }
 }
 
-@media only screen and (min-width: 600px) and (max-height: 480px) {
+@media only screen and (min-width: 601px) and (max-height: 480px) {
     :root {
         font-size: 12px;
     }
@@ -659,7 +661,7 @@ h1.main-title {
     }
 
     main td,
-    th {
+    main th {
         font-size: var(--fontSize_s);
     }
 
