@@ -46,7 +46,7 @@
         <nav class="navbar no-print">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="https://p74.ir" class="nav-link">
+                    <a href="https://p74.ir" class="nav-link" aria-label="Home">
                         <svg
                             aria-hidden="true"
                             focusable="false"
@@ -75,7 +75,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="contact.html" class="nav-link">
+                    <a href="contact.html" class="nav-link" aria-label="Contact">
                         <svg
                             aria-hidden="true"
                             focusable="false"
@@ -97,7 +97,7 @@
                 </li>
 
                 <li class="nav-item no-phone">
-                    <a href="mailto:contact@p74.ir" class="nav-link">
+                    <a href="mailto:contact@p74.ir" class="nav-link" aria-label="Email">
                         <svg
                             aria-hidden="true"
                             focusable="false"
@@ -119,7 +119,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="faq.html" class="nav-link">
+                    <a href="faq.html" class="nav-link" aria-label="FAQ">
                         <svg
                             aria-hidden="true"
                             focusable="false"
@@ -142,7 +142,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="interests.html" class="nav-link">
+                    <a href="interests.html" class="nav-link" aria-label="Interests">
                         <svg
                             aria-hidden="true"
                             focusable="false"
@@ -164,10 +164,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a
-                        href="javascript:if(window.print)window.print()"
-                        class="nav-link"
-                    >
+                    <button type="button" class="nav-link" onclick="window.print()" aria-label="Print">
                         <svg
                             aria-hidden="true"
                             focusable="false"
@@ -185,7 +182,7 @@
                             ></path>
                         </svg>
                         <span class="link-text">Print</span>
-                    </a>
+                    </button>
                 </li>
             </ul>
         </nav>
@@ -308,7 +305,7 @@
                         <h3>Programming</h3>
                         <ul>
                             <li>
-                                <b class="toggle" onclick="toggleSublist(this)">Software Development</b>
+                                <b class="toggle">Software Development</b>
                                 <ul class="hidden">
                                     <li>Algorithms</li>
                                     <li>Data structures</li>
@@ -319,7 +316,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <b class="toggle" onclick="toggleSublist(this)">Python</b>
+                                <b class="toggle">Python</b>
                                 <ul class="hidden">
                                     <li>Numpy | Pandas | SciPy | SciKit-Learn</li>
                                     <li>TensorFlow | Keras</li>
@@ -327,7 +324,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <b class="toggle" onclick="toggleSublist(this)">Java</b>
+                                <b class="toggle">Java</b>
                                 <ul class="hidden">
                                     <li>JSE | JEE</li>
                                     <li>Spring Boot | Spring MVC</li>
@@ -335,20 +332,20 @@
                                 </ul>
                             </li>
                             <li>
-                                <b class="toggle" onclick="toggleSublist(this)">C#</b>
+                                <b class="toggle">C#</b>
                                 <ul class="hidden">
                                     <li>.NET Framework</li>
                                 </ul>
                             </li>
                             <li>
-                                <b class="toggle" onclick="toggleSublist(this)">OS Platforms</b>
+                                <b class="toggle">OS Platforms</b>
                                 <ul class="hidden">
                                     <li>GNU/Linux (Debian, Red Hat)</li>
                                     <li>Microsoft Windows</li>
                                 </ul>
                             </li>
                             <li>
-                                <b class="toggle" onclick="toggleSublist(this)">Utilities</b>
+                                <b class="toggle">Utilities</b>
                                 <ul class="hidden">
                                     <li>Git</li>
                                     <li class="inactive">Docker</li>
@@ -360,21 +357,21 @@
                         <h3>Data Analysis</h3>
                         <ul>
                             <li>
-                                <b class="toggle" onclick="toggleSublist(this)">Data Administration and Warehousing</b>
+                                <b class="toggle">Data Administration and Warehousing</b>
                                 <ul class="hidden">
                                     <li>Oracle DB | PL/SQL</li>
                                     <li>Microsoft SQL Server</li>
                                 </ul>
                             </li>
                             <li>
-                                <b class="toggle" onclick="toggleSublist(this)">Data Visualization</b>
+                                <b class="toggle">Data Visualization</b>
                                 <ul class="hidden">
                                     <li>Tableau</li>
                                     <li>Microsoft Power BI</li>
                                 </ul>
                             </li>
                             <li>
-                                <b class="toggle" onclick="toggleSublist(this)">Spreadsheets</b>
+                                <b class="toggle">Spreadsheets</b>
                                 <ul class="hidden">
                                     <li>Microsoft Excel</li>
                                     <li>Power Query</li>
@@ -383,7 +380,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <b class="toggle" onclick="toggleSublist(this)">Machine Learning</b>
+                                <b class="toggle">Machine Learning</b>
                                 <ul class="hidden">
                                     <li>Supervised learning</li>
                                     <li>Classic models</li>
@@ -400,7 +397,7 @@
             <article id="languages">
                 <h2>Languages</h2>
                 <ul>
-                    <li>Persian (<span class="fa">𐎱 پارسی</span>)</li>
+                    <li>Persian (<span class="fa" lang="fa">𐎱 پارسی</span>)</li>
                     <li>English</li>
                     <li>German (Deutsch)</li>
                     <li>Russian (Русский)</li>
@@ -413,7 +410,7 @@
                 <h2>Fields of Interest</h2>
                 <ul>
                     <li>
-                        <h3 class="toggle" onclick="toggleSublist(this)">Computers & Technology</h3>
+                        <h3 class="toggle">Computers & Technology</h3>
                         <ul class="hidden">
                             <li>Computer Science</li>
                             <li>Data Science</li>
@@ -423,7 +420,7 @@
                     </li>
 
                     <li>
-                        <h3 class="toggle" onclick="toggleSublist(this)">STEM</h3>
+                        <h3 class="toggle">STEM</h3>
                         <ul class="hidden">
                             <li>Statistics</li>
                             <li>Physics</li>
@@ -434,7 +431,7 @@
                     </li>
 
                     <li>
-                        <h3 class="toggle" onclick="toggleSublist(this)">Humanities</h3>
+                        <h3 class="toggle">Humanities</h3>
                         <ul class="hidden">
                             <li>Philosophy of Science</li>
                             <li>Analytic Philosophy</li>

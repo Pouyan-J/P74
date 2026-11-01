@@ -122,8 +122,8 @@ main {
     --fontSize_n: 2rem;
     --fontSize_s: 1.5rem;
     --fontSize_m: 1rem;
-    opacity: 0.9;
-    background-color: var(--color_background);
+    background-color: rgb(0 0 0 / 0.9);
+    background-color: color-mix(in srgb, var(--color_background) 90%, transparent);
 
     overflow-x: hidden;
 }
@@ -327,7 +327,8 @@ button.pk:active {
     transition: var(--transition_speed);
 }
 
-.spoiler:hover {
+.spoiler:hover,
+.spoiler:focus {
     color: inherit;
     text-shadow: none;
     -webkit-user-select: text;
@@ -336,7 +337,7 @@ button.pk:active {
 }
 
 .inactive {
-    opacity: 40%;
+    opacity: 0.55;
 }
 
 main a img:hover {
@@ -353,8 +354,8 @@ h1.main-title {
 .boxed {
     padding: 3% 3%;
     border-radius: 1vw;
-    background: var(--color_background);
-    opacity: 0.9;
+    background: rgb(0 0 0 / 0.9);
+    background: color-mix(in srgb, var(--color_background) 90%, transparent);
 }
 
 .flex-container {
@@ -718,6 +719,42 @@ h1.main-title {
 @media (prefers-reduced-motion) {
     :root {
         --transition_speed: 0ms;
+    }
+}
+
+/* The Print entry is a <button>: make it look like the other nav links */
+button.nav-link {
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    text-align: start;
+    cursor: pointer;
+}
+
+/* Visible keyboard focus */
+.nav-link:focus-visible {
+    background: var(--color_background);
+    color: var(--color_foreground);
+    outline: 2px solid var(--color_tertiary);
+    outline-offset: -4px;
+}
+
+li .toggle[role="button"]:focus-visible,
+li .toggle [role="button"]:focus-visible {
+    outline: 2px solid var(--color_tertiary);
+    outline-offset: 2px;
+}
+
+/* Expand the sidebar (and show the link names) while a link has keyboard focus */
+@media only screen and (min-width: 601px) {
+    .navbar:has(:focus-visible) {
+        width: 16rem;
+    }
+
+    .navbar:has(:focus-visible) .link-text {
+        display: inline;
     }
 }
 

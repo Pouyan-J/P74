@@ -44,7 +44,7 @@
     <nav class="navbar no-print">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a href="https://p74.ir" class="nav-link">
+                <a href="https://p74.ir" class="nav-link" aria-label="Hauptseite">
                     <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="space-station-moon-alt"
                         role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                         class="svg-inline--fa fa-space-station-moon-alt fa-w-16 fa-5x">
@@ -62,7 +62,7 @@
             </li>
 
             <li class="nav-item">
-                <a href="contact.html" class="nav-link">
+                <a href="contact.html" class="nav-link" aria-label="Kontakt">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="id-card"
                         class="svg-inline--fa fa-id-card fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 576 512">
@@ -75,7 +75,7 @@
             </li>
 
             <li class="nav-item no-phone">
-                <a href="mailto:contact@p74.ir" class="nav-link">
+                <a href="mailto:contact@p74.ir" class="nav-link" aria-label="Email">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="at"
                         class="svg-inline--fa fa-at fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512">
@@ -88,7 +88,7 @@
             </li>
 
             <li class="nav-item">
-                <a href="faq.html" class="nav-link">
+                <a href="faq.html" class="nav-link" aria-label="F&amp;A">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="question"
                         class="svg-inline--fa fa-question fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 384 512" style="transform: scale(0.8);">
@@ -101,7 +101,7 @@
             </li>
 
             <li class="nav-item">
-                <a href="interests.html" class="nav-link">
+                <a href="interests.html" class="nav-link" aria-label="Interessen">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart"
                         class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path fill="currentColor" class="fa-primary"
@@ -113,7 +113,7 @@
             </li>
 
             <li class="nav-item">
-                <a href="javascript:if(window.print)window.print()" class="nav-link">
+                <button type="button" class="nav-link" onclick="window.print()" aria-label="Drucken">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="print"
                         class="svg-inline--fa fa-print fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512">
@@ -122,7 +122,7 @@
                         </path>
                     </svg>
                     <span class="link-text">Drucken</span>
-                </a>
+                </button>
             </li>
         </ul>
     </nav>
@@ -247,7 +247,7 @@
                     <h3>Programmierung</h3>
                     <ul>
                         <li>
-                            <b class="toggle" onclick="toggleSublist(this)">Softwareentwicklung</b>
+                            <b class="toggle">Softwareentwicklung</b>
                             <ul class="hidden">
                                 <li>Algorithmen</li>
                                 <li>Datenstrukturen</li>
@@ -258,7 +258,7 @@
                             </ul>
                         </li>
                         <li>
-                            <b class="toggle" onclick="toggleSublist(this)">Python</b>
+                            <b class="toggle">Python</b>
                             <ul class="hidden">
                                 <li>
                                     Numpy | Pandas | SciPy | SciKit-Learn
@@ -268,7 +268,7 @@
                             </ul>
                         </li>
                         <li>
-                            <b class="toggle" onclick="toggleSublist(this)">Java</b>
+                            <b class="toggle">Java</b>
                             <ul class="hidden">
                                 <li>JSE | JEE</li>
                                 <li>Spring Boot | Spring MVC</li>
@@ -276,20 +276,20 @@
                             </ul>
                         </li>
                         <li>
-                            <b class="toggle" onclick="toggleSublist(this)">C#</b>
+                            <b class="toggle">C#</b>
                             <ul class="hidden">
                                 <li>.NET Rahmen</li>
                             </ul>
                         </li>
                         <li>
-                            <b class="toggle" onclick="toggleSublist(this)">Betriebssystemplattformen</b>
+                            <b class="toggle">Betriebssystemplattformen</b>
                             <ul class="hidden">
                                 <li>GNU/Linux (Debian, Red Hat)</li>
                                 <li>Microsoft Windows</li>
                             </ul>
                         </li>
                         <li>
-                            <b class="toggle" onclick="toggleSublist(this)">Hilfsprogramme</b>
+                            <b class="toggle">Hilfsprogramme</b>
                             <ul class="hidden">
                                 <li>Git</li>
                                 <li class="inactive">Docker</li>
@@ -301,21 +301,21 @@
                     <h3>Datenanalyse</h3>
                     <ul>
                         <li>
-                            <b class="toggle" onclick="toggleSublist(this)">Datenverwaltung und -warehousing</b>
+                            <b class="toggle">Datenverwaltung und -warehousing</b>
                             <ul class="hidden">
                                 <li>Oracle DB | PL/SQL</li>
                                 <li>Microsoft SQL Server</li>
                             </ul>
                         </li>
                         <li>
-                            <b class="toggle" onclick="toggleSublist(this)">Datenvisualisierung</b>
+                            <b class="toggle">Datenvisualisierung</b>
                             <ul class="hidden">
                                 <li>Tableau</li>
                                 <li>Microsoft Power BI</li>
                             </ul>
                         </li>
                         <li>
-                            <b class="toggle" onclick="toggleSublist(this)">Tabellenkalkulationen</b>
+                            <b class="toggle">Tabellenkalkulationen</b>
                             <ul class="hidden">
                                 <li>
                                     Microsoft Excel
@@ -332,7 +332,7 @@
                             </ul>
                         </li>
                         <li>
-                            <b class="toggle" onclick="toggleSublist(this)">Maschinelles Lernen</b>
+                            <b class="toggle">Maschinelles Lernen</b>
                             <ul class="hidden">
                                 <li>Überwachtes Lernen</li>
                                 <li>Klassische Modelle</li>
@@ -349,7 +349,7 @@
         <article id="languages">
             <h2>Sprachen</h2>
             <ul>
-                <li>Persisch (<span class="fa">𐎱 پارسی</span>)</li>
+                <li>Persisch (<span class="fa" lang="fa">𐎱 پارسی</span>)</li>
                 <li>Englisch (English)</li>
                 <li>Deutsch</li>
                 <li>Russisch (Русский)</li>
@@ -362,7 +362,7 @@
             <h2>Interessengebiete</h2>
             <ul>
                 <li>
-                    <h3 class="toggle" onclick="toggleSublist(this)">Computer und Technologie</h3>
+                    <h3 class="toggle">Computer und Technologie</h3>
                     <ul class="hidden">
                         <li>Informatik</li>
                         <li>Datenwissenschaft</li>
@@ -372,7 +372,7 @@
                 </li>
 
                 <li>
-                    <h3 class="toggle" onclick="toggleSublist(this)">MINT-Fächer</h3>
+                    <h3 class="toggle">MINT-Fächer</h3>
                     <ul class="hidden">
                         <li>Statistik</li>
                         <li>Physik</li>
@@ -383,7 +383,7 @@
                 </li>
 
                 <li>
-                    <h3 class="toggle" onclick="toggleSublist(this)">Geisteswissenschaft</h3>
+                    <h3 class="toggle">Geisteswissenschaft</h3>
                     <ul class="hidden">
                         <li>Wissenschaftsphilosophie</li>
                         <li>Analytische Philosophie</li>
