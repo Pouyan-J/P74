@@ -4,7 +4,7 @@ var text = [
     //"Yes", // English
     "Ja", // German
     "Да", // Russian
-    '<span class="fa">آری</class>', // Persian
+    '<span class="fa">آری</span>', // Persian
     "Jes", // Esperanto
     "Go'i", // Lojban
     "Ναί", // Greek
