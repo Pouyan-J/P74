@@ -1,14 +1,14 @@
 "use strict";
 
 const moonImages = [
-    "https://raw.githubusercontent.com/tallulahh/moon-phase/main/newmoon.png",
-    "https://raw.githubusercontent.com/tallulahh/moon-phase/main/waxingcrescent.png",
-    "https://raw.githubusercontent.com/tallulahh/moon-phase/main/firstquarter.png",
-    "https://raw.githubusercontent.com/tallulahh/moon-phase/main/waxinggibbous.png",
-    "https://raw.githubusercontent.com/tallulahh/moon-phase/main/fullmoon.png",
-    "https://raw.githubusercontent.com/tallulahh/moon-phase/main/waninggibbous.png",
-    "https://raw.githubusercontent.com/tallulahh/moon-phase/main/lastquarter.png",
-    "https://raw.githubusercontent.com/tallulahh/moon-phase/main/waningcrescent.png",
+    "img/moon/newmoon.png",
+    "img/moon/waxingcrescent.png",
+    "img/moon/firstquarter.png",
+    "img/moon/waxinggibbous.png",
+    "img/moon/fullmoon.png",
+    "img/moon/waninggibbous.png",
+    "img/moon/lastquarter.png",
+    "img/moon/waningcrescent.png",
 ];
 
 const moonEmojis = ["🌑", "🌒", "🌓", "🌔", "🌕", "🌖", "🌗", "🌘"];
@@ -36,14 +36,13 @@ function handleSpecialDates(date) {
     const day = date.getDate();
 
     if (month === 5 && day === 4) {  // Star Wars day
-        document.getElementById("moon-phases").src = 'img/poster/no-moon.png';
+        document.getElementById("moon-phases").src = 'img/moon/no-moon.png';
         document.getElementById("moon-emoji").textContent = "⚫";
         document.getElementById("moon-quote").innerHTML = "“That's no moon…”<br /> — Obi-Wan Kenobi";
         return true;
     }
     if (month === 7 && day === 20) { // Apollo 11 landing
-        document.getElementById("moon-phases").src =
-            'img/poster/apollo11.png';
+        document.getElementById("moon-phases").src ='img/moon/apollo11.webp';
         document.getElementById("moon-emoji").textContent = "🦅";
         document.getElementById("moon-quote").innerHTML =
             "“Tranquility Base here. The Eagle has landed.”<br /> — Neil A. Armstrong (Apollo 11)";

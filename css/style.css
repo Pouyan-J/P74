@@ -35,6 +35,13 @@ body::before {
     background: url(../img/wd.jpg) 0 0 / cover no-repeat;
 }
 
+/* Hide background for legacy Edge browsers */
+@supports not (background-color: color-mix(in srgb, red, blue)) {
+    body::before {
+        display: none;
+    }
+}
+
 body::-webkit-scrollbar {
     width: 0.5rem;
 }
@@ -515,6 +522,107 @@ h1.main-title {
 }
 
 /*#endregion desktop*/
+
+/*#region toc*/
+
+main .toc {
+    --color_toc: #0c93b3;
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    /* border: 1px solid var(--color_secondary); */
+    border-radius: 0.5rem;
+    background-color: transparent;
+}
+
+main .toc summary {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: max-content;
+    font-size: var(--fontSize_m);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color_tertiary);
+    list-style: none;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+main .toc summary::-webkit-details-marker {
+    display: none;
+}
+
+main .toc details[open] > summary {
+    margin-bottom: 0.75rem;
+}
+
+/* The collapse button: ▲ while open, ▼ while collapsed */
+main .toc summary::after {
+    content: '\25B2';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid var(--color_secondary);
+    border-radius: 0.25rem;
+    font-size: 0.7rem;
+    letter-spacing: 0;
+    line-height: 1;
+}
+
+main .toc details:not([open]) > summary::after {
+    content: '\25BC';
+}
+
+main .toc summary:hover::after {
+    background-color: var(--color_secondary);
+    color: var(--color_tertiary);
+}
+
+/* main .toc summary:focus-visible {
+    outline: 2px solid var(--color_tertiary);
+    outline-offset: 4px;
+} */
+
+main .toc ul {
+    columns: 20rem 3;
+    column-gap: 2rem;
+    font-size: 1.25rem;
+    list-style: disc outside;
+}
+
+main .toc li {
+    break-inside: avoid;
+    margin-left: 1.5rem;
+    padding: 0.2rem 0;
+}
+
+main .toc li::marker {
+    color: var(--color_tertiary);
+}
+
+main .toc a:link,
+main .toc a:visited {
+    font-size: 1.25rem;
+    color: var(--color_toc);
+}
+
+main .toc a:hover,
+main .toc a:active {
+    color: var(--color_r6);
+}
+
+/* Desktop: the box takes at most a third of the viewport width */
+@media only screen and (min-width: 601px) {
+    main .toc {
+        box-sizing: border-box;
+        max-width: 33.333vw;
+    }
+}
+
+/*#endregion toc*/
 
 /*#region small-screens*/
 

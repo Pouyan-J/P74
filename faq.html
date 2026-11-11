@@ -141,6 +141,25 @@
 
     <main>
         <h1>Frequently Asked <mark>Questions</mark></h1>
+        <!-- toc:start -->
+        <nav class="toc no-print" aria-label="Table of contents">
+            <details>
+                <summary>Contents</summary>
+                <ul>
+                    <li><a href="#pouyan">What is the meaning of Pouyan?</a></li>
+                    <li><a href="#01001010">What do 74 and 01001010 mean?</a></li>
+                    <li><a href="#dark">Why is everything dark on this website?</a></li>
+                    <li><a href="#design">Why is the website designed like this?</a></li>
+                    <li><a href="#ai">Did you generate these texts with GenAI?</a></li>
+                    <li><a href="#background">What is the background image of this website?</a></li>
+                    <li><a href="#date">What is with JH dates?</a></li>
+                    <li><a href="#key">What is a public key?</a></li>
+                    <li><a href="#random">Would you throw a pseudorandom number for no reason?</a></li>
+                    <li><a href="#apollo">Did the Apollo moon landings happen?</a></li>
+                </ul>
+            </details>
+        </nav>
+        <!-- toc:end -->
 
         <hr />
 
@@ -217,7 +236,7 @@
         <hr />
 
         <article id="design">
-            <h2>Why the website is designed like this?</h2>
+            <h2>Why is the website designed like this?</h2>
             <p>
                 To be honest, I barely know anything about UI design and
                 front-end development since these are not my fields of
@@ -230,7 +249,7 @@
             <p>
                 Even though the design of this website might not be
                 considered “good”, I am proud of it since I did it – line by
-                line, from the scratch. However, I was not alone at all. I
+                line, from scratch. However, I was not alone at all. I
                 would like to thank
                 <a href="https://rvafaei.com/">Radin Vafaei</a> – who’s a
                 great web developer and also a fantastic friend – for his
@@ -238,7 +257,7 @@
                 <a href="https://www.youtube.com/c/Fireship">Fireship</a>
                 YouTube channel (for teaching me how to create a navbar!),
                 <a href="https://fontawesome.com/">Font Awesome</a> (for
-                pretty SVG’s under CC license),
+                pretty SVGs under CC license),
                 <a href="https://www.w3schools.com/">W3Schools</a> (which I
                 think my endless search queries appeared as DoS attacks to
                 their servers!), and the helpful community of
@@ -252,7 +271,7 @@
             </p>
             <p>
                 P.P.S. Any suggestion (except adding a light theme!) to
-                improve the looks of my website is welcomed. Dafür do
+                improve the looks of my website is welcome. Dafür do
                 <a href="contact.html">contact me</a>, please!
             </p>
             <p>
@@ -322,7 +341,7 @@
                 <a href="https://p74.ir/en">my CV</a> on this website is
                 meant to be used for official purposes (such as job
                 applications). That being said, I like my website to be how
-                I desire to be, rather than how it is typically supposed to
+                I desire it to be, rather than how it is typically supposed to
                 be.
             </p>
             <p>
@@ -332,11 +351,11 @@
                 <a href="https://www.timeanddate.com/calendar/persian-calendar.html">
                     Jalali calendar</a>
                 is just about what could be called a perfect solar calendar
-                for the needs of the 21<sup>st</sup>CE century.
+                for the needs of the 21<sup>st</sup> century CE.
                 Each year of this calendar begins exactly on the spring
                 equinox, followed by subsequent solstices and equinoxes to
                 determine the beginning of other seasons as well.
-                As an acclamation for Persian history, I would like to
+                As a tribute to Persian history, I would like to
                 utilize a particular variant of this calendar, known as the
                 <i>Persian Imperial calendar</i>. The origin of this variant
                 is specified to be the coronation of
@@ -367,7 +386,7 @@
                 to create my own "Jalali-grade" recorded-history-covering calender, which I call:
                 <a href="#date-picker">Jalali Holocene calendar</a>.
             </p>
-            <ul>
+            <ul translate="no">
                 <li>
                     <b>En:</b> JH = Jalali Holocene Era
                 </li>
@@ -392,7 +411,7 @@
             <p>
                 While on the subject, I should mention that instead of the UTC standard time, I tend to use the
                 <a href="https://cable.ayra.ch/metric">decimal time</a>
-                system, which divides the day into 10 hours, each hour to 100 minutes and each minute to 100 seconds.
+                system, which divides the day into 10 hours, each hour into 100 minutes and each minute into 100 seconds.
                 This system makes temporal calculations and computations less sophisticated, and also allows
                 straightforward interpretation of time as the elapsed fraction/percentage of the day.
             </p>
@@ -403,13 +422,16 @@
 
             <p>
                 <input type="date" name="date picker" id="date-picker" min="0622-03-21"
-                    style="font-family: Play; font-size: 2rem; background-color: silver; padding-left: 1rem;"> <span id="convertor"></span>
+                    style="font-family: Play; font-size: 2rem;
+                    color: white; background-color: rgb(0, 0, 0); border-color: silver; padding-left: 1rem;">
+                <span id="convertor"></span>
             </p>
 
             <p>
                 <input type="time" step="1" name="time picker" id="time-picker"
-                    style="font-family: Play; font-size: 2rem; background-color: silver; padding-left: 1rem;"> <span
-                    id="time-convertor"></span>
+                    style="font-family: Play; font-size: 2rem;
+                    color: white; background-color: rgb(0, 0, 0); border-color: silver; padding-left: 1rem;">
+                <span id="time-convertor"></span>
             </p>
         </article>
 
@@ -422,7 +444,7 @@
                 <a href="https://www.sciencedirect.com/topics/computer-science/asymmetric-cryptography"
                     target="_blank">asymmetric cryptography</a>. You could encrypt any desired message using
                 <a href="https://p74.ir/public_key" target="_blank">my public key</a>
-                and then sent it to me through any platform since no
+                and then send it to me through any platform since no
                 individual could ever decrypt it other than whoever
                 possesses the corresponding private key (supposedly me).
                 Furthermore, it could be used to validate my digital
